@@ -24,7 +24,7 @@ static void ADC_vValueHanler1(uint32_t ulAdValue);
 static void ADC_vValueHanler2(uint32_t ulAdValue);
 static void ADC_vValueHanler3(uint32_t ulAdValue);
 static void ADC_vValueHanler4(uint32_t ulAdValue);
-static void ADC_vValueHanler5(uint32_t ulAdValue);
+
 
 /*1分钟电源电压滤波*/
 static uint8_t supply_voltage_flag = 0;
@@ -108,13 +108,13 @@ static void AdcChannelConfig(void)
     MEM_ZERO_STRUCT(stcChCfg);
 
     /* 0. Remap the correspondence between channels and analog input pins. */
-    ADC_ChannelRemap(M4_ADC1, ADC1_CH0, ADC1_IN13);
+    ADC_ChannelRemap(M4_ADC1, ADC1_CH0, ADC1_IN14);
+    ADC_ChannelRemap(M4_ADC1, ADC1_CH1, ADC1_IN15);
     
-    ADC_ChannelRemap(M4_ADC2, ADC2_CH0, ADC12_IN6);
-    ADC_ChannelRemap(M4_ADC2, ADC2_CH1, ADC12_IN7);
-    ADC_ChannelRemap(M4_ADC2, ADC2_CH2, ADC12_IN8);
-    ADC_ChannelRemap(M4_ADC2, ADC2_CH3, ADC12_IN10);
-    ADC_ChannelRemap(M4_ADC2, ADC2_CH4, ADC12_IN11);
+    ADC_ChannelRemap(M4_ADC2, ADC2_CH0, ADC12_IN4);
+    ADC_ChannelRemap(M4_ADC2, ADC2_CH1, ADC12_IN6);
+    ADC_ChannelRemap(M4_ADC2, ADC2_CH2, ADC12_IN9);
+
  
     /**************************** Add ADC1 channels ****************************/
     /* 1. Set the ADC pin to analog mode. */
@@ -196,7 +196,7 @@ static void AdcDmaConfig(void)
     stcDmaCfg.u16BlockSize = ADC2_SA_DMA_BLOCK_SIZE;
     stcDmaCfg.u16TransferCnt = ADC2_SA_DMA_TRANS_COUNT;
     stcDmaCfg.u32SrcAddr = (uint32_t)(&M4_ADC2->DR0);
-    stcDmaCfg.u32DesAddr = (uint32_t)(&ADC_uiAdcDmaBuffer[1]);
+    stcDmaCfg.u32DesAddr = (uint32_t)(&ADC_uiAdcDmaBuffer[2]);
     stcDmaCfg.u16DesRptSize = ADC2_SA_DMA_BLOCK_SIZE;
     stcDmaCfg.u16SrcRptSize = ADC2_SA_DMA_BLOCK_SIZE;
     stcDmaCfg.u32DmaLlp = 0u;
@@ -381,48 +381,31 @@ static void AdcSetPinMode(uint8_t u8AdcPin, en_pin_mode_t enMode)
 
 static void ADC_vValueHanler0(uint32_t ulAdValue)
 {
-    float fAdcurrent = 0;
-    if (ulAdValue == 0)
-    {
-        fAdcurrent = 1;
-    }
-    else
-    {
-        fAdcurrent = (float)ulAdValue;
-    }
-    
-    ADC_tInfo.fConvertValue[ADC_IDX_0] = fAdcurrent;
+	float fAdcurrent = 0;
+	fAdcurrent = ((float)(ulAdValue - 886.663701f)) / 31.6106517f;   //886.663701和31.6106517都是硬件上面计算得来
+	ADC_tInfo.fConvertValue[ADC_IDX_1] = fAdcurrent;
+
 }
 static void ADC_vValueHanler1(uint32_t ulAdValue)
 {
-    supply_voltage_flag = 1;
-    float fAdcurrent = 0;
-    fAdcurrent = ((float)(ulAdValue) / 1241 - (5.31 * 0.134)) / (5.31 * 0.002);
-    ADC_tInfo.fConvertValue[ADC_IDX_1] = fAdcurrent;
+    
 }
 static void ADC_vValueHanler2(uint32_t ulAdValue)
 {
-    float fAdcurrent = 0;
-    fAdcurrent = ((float)(ulAdValue) / 1241 - (5.31 * 0.134)) / (5.31 * 0.002);
-    ADC_tInfo.fConvertValue[ADC_IDX_2] = fAdcurrent;
+    supply_voltage_flag = 1;
+    float fAdvlaue = 0;
+    fAdvlaue = (float)(ulAdValue) / 1241 * 11;
+    ADC_tInfo.fConvertValue[ADC_IDX_2] = fAdvlaue;
 }
 static void ADC_vValueHanler3(uint32_t ulAdValue)
 {
-    float fAdcurrent = 0;
-    fAdcurrent = ((float)(ulAdValue) / 1241 - (5.31 * 0.134)) / (5.31 * 0.002);
-    ADC_tInfo.fConvertValue[ADC_IDX_3] = fAdcurrent;
-
+    
 }
 static void ADC_vValueHanler4(uint32_t ulAdValue)
 {
-    float fAdvlaue = 0;
-    fAdvlaue = (float)(ulAdValue) / 1241 * 11;
-    ADC_tInfo.fConvertValue[ADC_IDX_4] = fAdvlaue;
+   
 }
-static void ADC_vValueHanler5(uint32_t ulAdValue)
-{
-    
-}
+
 
 
 
@@ -440,8 +423,8 @@ int ADC_iTaskHandler(void)
     if (tid != RT_NULL)rt_thread_startup(tid);
 
 
-    /*1ms软件周期定时器*/
-    supply_voltage_timer = rt_timer_create("one_millisecond", supply_voltage_timeout,
+    /*1s软件周期定时器*/
+    supply_voltage_timer = rt_timer_create("supply_voltage_timer", supply_voltage_timeout,
         RT_NULL, 100,
         RT_TIMER_FLAG_PERIODIC | RT_TIMER_FLAG_SOFT_TIMER);
     if (supply_voltage_timer != RT_NULL)rt_timer_start(supply_voltage_timer);
@@ -502,7 +485,7 @@ static void ADC_vCalculateADValue(void)
     ADC_vValueHanler2(ADC_tInfo.ulADValue[ADC_IDX_2]);
     ADC_vValueHanler3(ADC_tInfo.ulADValue[ADC_IDX_3]);
     ADC_vValueHanler4(ADC_tInfo.ulADValue[ADC_IDX_4]);
-    ADC_vValueHanler5(ADC_tInfo.ulADValue[ADC_IDX_5]);
+
 }
 
 static void supply_voltage_timeout(void* parameter)
@@ -510,22 +493,18 @@ static void supply_voltage_timeout(void* parameter)
     
     if (supply_voltage_flag == 1)
     {
-        ADC_tInfo.supply_voltage = (ADC_tInfo.supply_voltage == 0) ? ADC_tInfo.fConvertValue[ADC_IDX_4] : ADC_tInfo.supply_voltage;//第一次写入
+        ADC_tInfo.supply_voltage = (ADC_tInfo.supply_voltage == 0) ? ADC_tInfo.fConvertValue[ADC_IDX_2] : ADC_tInfo.supply_voltage;//第一次写入
 
-        supply_voltage_buff += ADC_tInfo.fConvertValue[ADC_IDX_4];
+        supply_voltage_buff += ADC_tInfo.fConvertValue[ADC_IDX_2];
         supply_voltage_count++;
-        if (supply_voltage_count == 60)
+        if (supply_voltage_count == 60)    //1s进入一次，当到60次时，就是1分钟
         {
             ADC_tInfo.supply_voltage = supply_voltage_buff / supply_voltage_count;
             supply_voltage_buff = 0;
             supply_voltage_count = 0;
         }
     }
-    /*else if (supply_voltage_flag == 1)
-    {
-        supply_voltage_flag = 2;
-        ADC_tInfo.supply_voltage = ADC_tInfo.fConvertValue[ADC_IDX_4];
-    }*/
+
 }
 TAdcInfoDef* ADC_ptGetInfo(void)
 {

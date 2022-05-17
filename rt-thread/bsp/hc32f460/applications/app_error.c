@@ -41,10 +41,7 @@ static void ERROR_vTaskHandler_Entry(void* parameter)
 
 static void Error_TaskHandler(void)
 {
-    /*if ((ADC_ptGetInfo()->fConvertValue[ADC_IDX_5]) > 50.0f)
-    {
-        vErrorCodeAdd(Temperature_Over);
-    }*/
+   
 }
 
 static void vErrorCodeAdd(ErrorCode codenum)

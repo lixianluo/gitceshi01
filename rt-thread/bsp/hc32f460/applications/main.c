@@ -12,19 +12,30 @@
 #include <rtdevice.h>
 #include "hc32_common.h"
 #include "gpio.h"
-
-
-#include "time4_1.h"
 #include "timea.h"
+#include "main.h"
 
 #define DBG_TAG "main"
 #define DBG_LVL DBG_INFO
 #include <rtdbg.h>
 
+
+/*---------------------------------------------------------------*/
+
+/*私有变量-------------------------------------------------------*/
+static TtimeInfo time_tInfo;
+/*---------------------------------------------------------------*/
+
+
+/*私有函数-------------------------------------------------------*/
 static  rt_timer_t one_msecond_timer;
 static void one_msecond_timeout(void* parameter);
 
-uint32_t systick = 0;
+
+/*---------------------------------------------------------------*/
+
+
+
 
 
 
@@ -41,18 +52,33 @@ int32_t main(void)
 	if (one_msecond_timer != RT_NULL)rt_timer_start(one_msecond_timer);
 	
 
+
+
 	while(1)
 	{
-		
+		rt_thread_mdelay(500);
 		GREEN_TOGGLE();
-
-		rt_thread_mdelay(500);	
+		
 	}
 }
 
 static void one_msecond_timeout(void* parameter)
 {
-	systick++;
+	time_tInfo.systick_s++;
+	if ((time_tInfo.systick_s % 60) == 0)
+	{
+		time_tInfo.systick_s = 0;
+		time_tInfo.systick_min++;
+		if ((time_tInfo.systick_min % 60) == 0)
+		{
+			time_tInfo.systick_min = 0;
+			time_tInfo.systick_hrs++;
+		}
+	}
 	
 }
 
+TtimeInfo* Main_ptGetInfo(void)
+{
+	return &time_tInfo;
+}

@@ -393,11 +393,6 @@
               <FilePath>.\applications\gpio.c</FilePath>
             </File>
             <File>
-              <FileName>time4_1.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\applications\time4_1.c</FilePath>
-            </File>
-            <File>
               <FileName>timea.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\applications\timea.c</FilePath>
@@ -451,6 +446,11 @@
               <FileName>app_error.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\applications\app_error.c</FilePath>
+            </File>
+            <File>
+              <FileName>flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\applications\flash.c</FilePath>
             </File>
           </Files>
         </Group>

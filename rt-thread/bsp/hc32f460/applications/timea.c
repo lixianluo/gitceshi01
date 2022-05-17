@@ -33,21 +33,21 @@ void Timera_vInit(void)
     TIMERA_BaseInit(BRUSH_MOTOR_PWM, &stcTimeraInit);
     TIMERA_BaseInit(SUCTION_MOTOR_PWM, &stcTimeraInit);
     /* Configuration timera  compare structure */
-    stcTimerCompareInit.u16CompareVal = 0;
-    stcTimerCompareInit.enStartCountOutput = TimeraCountStartOutputHigh;
-    stcTimerCompareInit.enStopCountOutput = TimeraCountStopOutputHigh;
-    stcTimerCompareInit.enCompareMatchOutput = TimeraCompareMatchOutputLow;
-    stcTimerCompareInit.enPeriodMatchOutput = TimeraPeriodMatchOutputHigh;
+    stcTimerCompareInit.u16CompareVal = 6400;
+    stcTimerCompareInit.enStartCountOutput = TimeraCountStartOutputLow;
+    stcTimerCompareInit.enStopCountOutput = TimeraCountStopOutputLow;
+    stcTimerCompareInit.enCompareMatchOutput = TimeraCompareMatchOutputHigh;
+    stcTimerCompareInit.enPeriodMatchOutput = TimeraPeriodMatchOutputLow;
     stcTimerCompareInit.enSpecifyOutput = TimeraSpecifyOutputInvalid;
     stcTimerCompareInit.enCacheEn = Disable;
     stcTimerCompareInit.enTriangularTroughTransEn = Disable;
     stcTimerCompareInit.enTriangularCrestTransEn = Disable;
-    stcTimerCompareInit.u16CompareCacheVal = 0;
+    stcTimerCompareInit.u16CompareCacheVal = 6400;
     TIMERA_CompareInit(BRUSH_MOTOR_PWM, BRUSH_MOTOR_PWM_CH, &stcTimerCompareInit);
     
     /* Configure Channel  */  
     MEM_ZERO_STRUCT(stcTimerCompareInit);
-    stcTimerCompareInit.u16CompareVal = 0;
+    stcTimerCompareInit.u16CompareVal = 6400;
     stcTimerCompareInit.enStartCountOutput = TimeraCountStartOutputLow;
     stcTimerCompareInit.enStopCountOutput = TimeraCountStopOutputLow;
     stcTimerCompareInit.enCompareMatchOutput = TimeraCompareMatchOutputHigh;
@@ -59,8 +59,9 @@ void Timera_vInit(void)
     stcTimerCompareInit.u16CompareCacheVal = 6400;
     TIMERA_CompareInit(SUCTION_MOTOR_PWM, SUCTION_MOTOR_PWM_CH, &stcTimerCompareInit);
 
-    TIMERA_CompareCmd(SUCTION_MOTOR_PWM, SUCTION_MOTOR_PWM_CH, Disable);
+    
     TIMERA_CompareCmd(BRUSH_MOTOR_PWM, BRUSH_MOTOR_PWM_CH, Disable);
+    TIMERA_CompareCmd(SUCTION_MOTOR_PWM, SUCTION_MOTOR_PWM_CH, Disable);
 
     TIMERA_Cmd(BRUSH_MOTOR_PWM, Enable);
     TIMERA_Cmd(SUCTION_MOTOR_PWM, Enable);
@@ -77,14 +78,6 @@ void Timera_Motor_Contorl(Motor_Swicth motor, en_functional_state_t control ,uin
             uint16_t count1 = ((TIMERA_PERVAL_VAL / 200) * (200 - percent));  //盘刷电机 PWM为反相，PWM为0时则电机最高速
             TIMERA_SetCompareValue(BRUSH_MOTOR_PWM, BRUSH_MOTOR_PWM_CH, count1);
             TIMERA_CompareCmd(BRUSH_MOTOR_PWM, BRUSH_MOTOR_PWM_CH, control);
-            /*if (control == Enable)
-            {
-                PORT_ResetBits(BRU_MOTOR_BRAKE_PORT, BRU_MOTOR_BRAKE_PIN);
-            }
-            else
-            {
-                PORT_SetBits(BRU_MOTOR_BRAKE_PORT, BRU_MOTOR_BRAKE_PIN);
-            }*/
             break;
         }
         case Suction_Motor:
@@ -98,9 +91,5 @@ void Timera_Motor_Contorl(Motor_Swicth motor, en_functional_state_t control ,uin
     }
 }
 
-//void Suction_Motor_Contorl(en_functional_state_t control, uint8_t percent)
-//{
-//    uint16_t count1 = ((TIMERA_PERVAL_VAL / 200) * percent);
-//}
 
      

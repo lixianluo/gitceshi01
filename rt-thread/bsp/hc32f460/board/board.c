@@ -11,7 +11,6 @@
 #include <rtthread.h>
 #include "board.h"
 #include "gpio.h"
-#include "time4_1.h"
 #include "timea.h"
 #include "adc.h"
 #include "wdt.h"
@@ -82,20 +81,28 @@ void SysTick_Handler(void)
  */
 void rt_hw_board_init(void)
 {
+    
+
     SysClkConfig();
     SysTick_Init(RT_TICK_PER_SECOND);
+    
+    /**disable Jtag*/
+    PORT_DebugPortSetting(TDO_SWO, Disable);
+    PORT_DebugPortSetting(TRST, Disable);
    	GPIO_vInit();
-    Time4_1_vInit();
 	Timera_vInit();
 	Adc_vConfig();
     WDT_vConfig();
     /* Call components board initial (use INIT_BOARD_EXPORT()) */
+
 #ifdef RT_USING_COMPONENTS_INIT
     rt_components_board_init();
 #endif
 #if defined(RT_USING_USER_MAIN) && defined(RT_USING_HEAP)
     rt_system_heap_init((void *)HEAP_BEGIN, (void *)HEAP_END);
 #endif
+   
+
 #ifdef RT_USING_CONSOLE
     rt_console_set_device(RT_CONSOLE_DEVICE_NAME);
 #endif

@@ -28,5 +28,4 @@ static void WDT_vTaskHandler_Entry(void* parameter)
         WDT_RefreshCounter();
         rt_thread_mdelay(30);
     }
-
 }
