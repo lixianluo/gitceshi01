@@ -41,7 +41,7 @@ static void ERROR_vTaskHandler_Entry(void* parameter)
 
 static void Error_TaskHandler(void)
 {
-   
+    ;
 }
 
 static void vErrorCodeAdd(ErrorCode codenum)

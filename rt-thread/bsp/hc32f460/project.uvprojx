@@ -452,6 +452,16 @@
               <FileType>1</FileType>
               <FilePath>.\applications\flash.c</FilePath>
             </File>
+            <File>
+              <FileName>time0.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\applications\time0.c</FilePath>
+            </File>
+            <File>
+              <FileName>usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\applications\usart.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

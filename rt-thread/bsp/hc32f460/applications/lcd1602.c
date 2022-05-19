@@ -26,16 +26,16 @@ void IIC_LCD1602_Write_Data(uint8_t data)
 
 void IIC_LCD1602_Write_Init(void)
 {
-	rt_thread_mdelay(500);
+	rt_thread_mdelay(100);
 	PCF8574_Init();				  //PCF8574初始化
-	
 	IIC_LCD1602_Write_Cmd(0x33);  //设置显示 4 线
 	IIC_LCD1602_Write_Cmd(0x32);  //设置显示 4 线控制;
 	IIC_LCD1602_Write_Cmd(0x28);  //设置显示 16*2方式 5*7点阵
+
 	IIC_LCD1602_Write_Cmd(0x06);  //地址右移动，数据不变
 	IIC_LCD1602_Write_Cmd(0x0C);  //开启显示，不显示光标
 	IIC_LCD1602_Write_Cmd(0x01);  //清屏
-	//IIC_LCD1602_Write_Cmd(0x80);  //起始地址
+
 	rt_thread_mdelay(100);
 }
 

@@ -1,7 +1,7 @@
 #include "flash.h"
 #include "hc32f460_efm.h"
 #include "main.h"
-#include "app.display.h"
+#include "app_display.h"
 #include <rtthread.h>
 #include "app_key.h"
 

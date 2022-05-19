@@ -9,7 +9,7 @@
 #define LED2_PORT							(PortC)
 #define LED2_PIN							(Pin15)
 
-#define GREEN_TOGGLE()						(PORT_Toggle(LED1_PORT, LED1_PIN))
+#define BLUE_TOGGLE()						(PORT_Toggle(LED1_PORT, LED1_PIN))
 #define RED_TOGGLE()						(PORT_Toggle(LED2_PORT, LED2_PIN))
 
 

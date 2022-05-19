@@ -14,6 +14,8 @@
 #include "timea.h"
 #include "adc.h"
 #include "wdt.h"
+#include "time0.h"
+#include "usart.h"
 
 
 void rt_os_tick_callback(void)
@@ -90,8 +92,10 @@ void rt_hw_board_init(void)
     PORT_DebugPortSetting(TDO_SWO, Disable);
     PORT_DebugPortSetting(TRST, Disable);
    	GPIO_vInit();
+    TIMER0_vInit();
 	Timera_vInit();
 	Adc_vConfig();
+    UART3_vInit();
     WDT_vConfig();
     /* Call components board initial (use INIT_BOARD_EXPORT()) */
 

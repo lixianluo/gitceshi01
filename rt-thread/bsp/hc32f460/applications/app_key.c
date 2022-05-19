@@ -108,7 +108,7 @@ static void Key_vTaskHandler_entry(void* parameter)
         }
         else if (Off_vlaue > 500)
         {
-            Key_tInfo.Off_key_Flag = 0;
+            Key_tInfo.Off_key_Flag = 0;     //!!!!!!测试已改，记得改回
         }
 
         rt_thread_mdelay(5);
