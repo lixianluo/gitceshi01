@@ -48,6 +48,7 @@ static void Key_vTaskHandler_entry(void* parameter)
             if (Key_tCount.Brush_key_Flag >= 40)
             {
                 Key_tInfo.Brush_key_Flag = 1;
+                Key_tInfo.Work_Status = 0x02;
             }
         }
         else if (PORT_GetBit(BRUSH_START_PORT, BRUSH_START_PIN) == Set)
@@ -63,6 +64,7 @@ static void Key_vTaskHandler_entry(void* parameter)
             if (Key_tCount.Suction_key_Flag >= 40)
             {
                 Key_tInfo.Suction_key_Flag = 1;
+                Key_tInfo.Work_Status = 0x01;
             }
         }
         else if (PORT_GetBit(SUCTION_START_PORT, SUCTION_START_PIN) == Set)
@@ -78,6 +80,7 @@ static void Key_vTaskHandler_entry(void* parameter)
             if (Key_tCount.All_key_Flag >= 40)
             {
                 Key_tInfo.All_key_Flag = 1;
+                Key_tInfo.Work_Status = 0x03;
             }
         }
         else if (PORT_GetBit(ALL_START_PORT, ALL_START_PIN) == Set)
@@ -105,10 +108,11 @@ static void Key_vTaskHandler_entry(void* parameter)
         if (Off_vlaue < 500)  //AD关机采样：关机为0-2，开机为3164-3167
         {
             Key_tInfo.Off_key_Flag = 1;
+            Key_tInfo.Work_Status = 0x00;
         }
         else if (Off_vlaue > 500)
         {
-            Key_tInfo.Off_key_Flag = 0;     //!!!!!!测试已改，记得改回
+            Key_tInfo.Off_key_Flag = 0;     
         }
 
         rt_thread_mdelay(5);

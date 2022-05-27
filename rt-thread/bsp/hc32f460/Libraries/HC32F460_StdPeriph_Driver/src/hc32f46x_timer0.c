@@ -55,7 +55,8 @@
 #include "hc32f46x_timer0.h"
 #include "hc32f46x_utility.h"
 
-#if (DDL_TIMER0_ENABLE == DDL_ON)
+
+#if (DDL_TIMER0_ENABLE == DDL_ON) 
 
 /**
  *******************************************************************************

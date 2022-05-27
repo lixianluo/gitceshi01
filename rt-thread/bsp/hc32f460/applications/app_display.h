@@ -16,6 +16,8 @@ typedef enum {
 
 typedef struct {
 	TDisplayTaskState tTaskState;
+	uint8_t			  batter_info;
+	uint8_t			  wifi_switch;
 }DisplayTaskDef;
 
 /*¶ÔÍâº¯Êı---------------------------------------------*/

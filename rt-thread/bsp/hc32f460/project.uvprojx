@@ -462,6 +462,11 @@
               <FileType>1</FileType>
               <FilePath>.\applications\usart.c</FilePath>
             </File>
+            <File>
+              <FileName>app_IOT2Board.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\applications\app_IOT2Board.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -723,9 +728,14 @@
               <FilePath>.\Libraries\HC32F460_StdPeriph_Driver\src\hc32f46x_wdt.c</FilePath>
             </File>
             <File>
-              <FileName>hc32f46x_dmac.c</FileName>
+              <FileName>hc32f46x_timer0.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Libraries\HC32F460_StdPeriph_Driver\src\hc32f46x_dmac.c</FilePath>
+              <FilePath>.\Libraries\HC32F460_StdPeriph_Driver\src\hc32f46x_timer0.c</FilePath>
+            </File>
+            <File>
+              <FileName>hc32f460_dmac.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Libraries\HC32F460_StdPeriph_Driver\src\hc32f460_dmac.c</FilePath>
             </File>
           </Files>
         </Group>

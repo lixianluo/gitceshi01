@@ -3,7 +3,7 @@
 #include "adc.h"
 
 
-static uint8_t uiErrorCode = 0;
+static uint32_t uiErrorCode = 0;
 
 static void Error_TaskHandler(void);
 static void vErrorCodeAdd(ErrorCode codenum);
@@ -52,4 +52,8 @@ static void vErrorCodeAdd(ErrorCode codenum)
 static void vErrorCodeDel(ErrorCode codenum)
 {
     uiErrorCode = uiErrorCode & (~(0x0001 << codenum));
+}
+uint32_t Error_ptGetInfo(void)
+{
+    return uiErrorCode;
 }

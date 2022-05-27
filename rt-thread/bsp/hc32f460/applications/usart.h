@@ -1,10 +1,9 @@
 #ifndef _USART_H_
 #define _USART_H_
 #include <stdint.h>
-#include "hc32f460_usart.h"
-#include "hc32f460_gpio.h"
-#include "hc32f460_dmac.h"
 #include "board.h"
+
+//#include "app_IOT2Board.h"
 
 #define UART_DMA_BUFF_SIZE      80
 
@@ -45,13 +44,18 @@ typedef struct _UART_HandleTypeDef {
     uint8_t ucRxDmaCh;
 }UART_HandleTypeDef;
 
+/*对外变量---------------------------------------------*/
+extern UART_HandleTypeDef uart3_handler;
 
+
+/*------------------------------------------------------*/
 
 /*对外函数---------------------------------------------*/
 uint32_t UART_vGetDMACount(UART_HandleTypeDef* ptUartHandler);
 extern void UART_vTransmitDMA(UART_HandleTypeDef* ptUartHandler, TDmaBuffDef* ptDmaBuff);
 extern void UART_vReceiveDMA(UART_HandleTypeDef* ptUartHandler, TDmaBuffDef* ptDmaBuff, uint16_t uiDataLen);
 extern void UART3_vInit(void);
+extern void Usart3RxIrqCallback(void);
 /*------------------------------------------------------*/
 
 #endif // !_USART_H_

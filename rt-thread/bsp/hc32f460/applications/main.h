@@ -7,13 +7,16 @@ typedef struct {
 	uint32_t systick_s;
 	uint32_t systick_min;
 	uint32_t systick_hrs;
+	uint32_t IOT_systick_min;
 }TtimeInfo;
 
 typedef enum {
 	TMR_BULE_LED,
 	TMR_DISPLAY_START_VERSION,
 	TMR_DISPLAY_START_LOGO,
+	TMR_DISPLAY_WIFI,
 	TMR_SYS_CLOSE_DELAY,
+	TMR_SYS_USART_SEND,
 	TMR_NUM,
 }TSWTimerIndex;
 typedef enum {

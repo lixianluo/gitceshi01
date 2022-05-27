@@ -56,7 +56,9 @@ static void Display_Error(void);
 static void Display_WIFI(void);
 static void DisplayErrorHandler(void);
 static void Display_Close(void);
-
+static void Display_WIFI_ON(void); 
+static void Display_WIFI_OFF(void);
+static void	Display_WIFI_Filp(void);
 /*---------------------------------------------------------------*/
 int Display_iTaskHandler(void)
 {
@@ -94,6 +96,7 @@ static void Display_vTaskHandler_entry(void* parameter)
                 IIC_LCE1602_WIFI_Init();                    //1602wifi·ûºÅ³õÊ¼»¯
                 TMR_vSetTime_100msValue(TMR_DISPLAY_START_VERSION, 15);
                 TMR_vSetTime_100msValue(TMR_DISPLAY_START_LOGO, 30);
+                TMR_vSetTime_100msValue(TMR_DISPLAY_WIFI, 100);
                 DisplayTaskState.tTaskState = DISPLAY_TASK_INIT_DONE;
                 break;
             }
@@ -170,50 +173,74 @@ static void Display_Run(void)
         if (ADC_ptGetInfo()->supply_voltage >= 24.5f)
         {
             IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[10]), (uint8_t*)battery[10]);
+            DisplayTaskState.batter_info = 10;
         }
         if ((ADC_ptGetInfo()->supply_voltage >= 24.3f) && (ADC_ptGetInfo()->supply_voltage < 24.5f))
         {
             IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[9]), (uint8_t*)battery[9]);
+            DisplayTaskState.batter_info = 9;
         }
         if ((ADC_ptGetInfo()->supply_voltage >= 24.1f) && (ADC_ptGetInfo()->supply_voltage < 24.3f))
         {
             IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[8]), (uint8_t*)battery[8]);
+            DisplayTaskState.batter_info = 8;
         }
         if ((ADC_ptGetInfo()->supply_voltage >= 23.7f) && (ADC_ptGetInfo()->supply_voltage < 24.1f))
         {
             IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[7]), (uint8_t*)battery[7]);
+            DisplayTaskState.batter_info = 7;
         }
         if ((ADC_ptGetInfo()->supply_voltage >= 23.3f) && (ADC_ptGetInfo()->supply_voltage < 23.7f))
         {
             IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[6]), (uint8_t*)battery[6]);
+            DisplayTaskState.batter_info = 6;
         }
         if ((ADC_ptGetInfo()->supply_voltage >= 23.0f) && (ADC_ptGetInfo()->supply_voltage < 23.3f))
         {
             IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[5]), (uint8_t*)battery[5]);
+            DisplayTaskState.batter_info = 5;
         }
         if ((ADC_ptGetInfo()->supply_voltage >= 22.8f) && (ADC_ptGetInfo()->supply_voltage < 23.0f))
         {
             IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[4]), (uint8_t*)battery[4]);
+            DisplayTaskState.batter_info = 4;
         }
         if ((ADC_ptGetInfo()->supply_voltage >= 22.6f) && (ADC_ptGetInfo()->supply_voltage < 22.8f))
         {
             IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[3]), (uint8_t*)battery[3]);
+            DisplayTaskState.batter_info = 3;
         }
         if ((ADC_ptGetInfo()->supply_voltage >= 22.4f) && (ADC_ptGetInfo()->supply_voltage < 22.6f))
         {
             IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[2]), (uint8_t*)battery[2]);
+            DisplayTaskState.batter_info = 2;
         }
         if ((ADC_ptGetInfo()->supply_voltage >= 22.2f) && (ADC_ptGetInfo()->supply_voltage < 22.4f))
         {
             IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[1]), (uint8_t*)battery[1]);
+            DisplayTaskState.batter_info = 1;
         }
         if (ADC_ptGetInfo()->supply_voltage < 22.2f)
         {
             IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[0]), (uint8_t*)battery[0]);
+            DisplayTaskState.batter_info = 0;
         }
     Display_UseTime();
 
-    Display_WIFI();
+    if (DisplayTaskState.wifi_switch == 1)
+    {
+        Display_WIFI_ON();
+    }
+    else if (TMR_bIsTimeExpired(TMR_DISPLAY_WIFI))
+    {
+        Display_WIFI_OFF();
+    }
+    else
+    {
+        Display_WIFI_Filp();
+    }
+ 
+    
  
 }
 
@@ -228,7 +255,7 @@ static void Display_UseTime(void)
 
     IIC_LCD1602_Write_Number2(LCD_DDRAM_ADDR_TIME_MIN_START, systick_min);
 }
-static void Display_WIFI(void)	//500msÁÁ500msÃğ
+static void Display_WIFI_Filp(void)	//500msÁÁ500msÃğ
 {
     if (systick_100ms < 5)			
     {
@@ -239,6 +266,14 @@ static void Display_WIFI(void)	//500msÁÁ500msÃğ
     {
         IIC_LCE1602_WIFI_Not_Display();
     }
+}
+static void Display_WIFI_ON(void)
+{
+    IIC_LCE1602_WIFI_Display();
+}
+static void Display_WIFI_OFF(void)
+{
+    IIC_LCE1602_WIFI_Not_Display();
 }
 static void Display_Error(void)
 {
@@ -267,7 +302,6 @@ static void DisplayErrorHandler(void)
     else
     {
 		DisplayTaskState.tTaskState = DISPLAY_TASK_INIT;
-        
 	}
 
 }

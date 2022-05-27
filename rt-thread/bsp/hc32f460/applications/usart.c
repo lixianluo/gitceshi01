@@ -1,7 +1,13 @@
 #include "usart.h"
+#include "app_IOT2Board.h"
 
 
-UART_HandleTypeDef uart3_handler;   
+/*对外变量-------------------------------------------------*/
+UART_HandleTypeDef uart3_handler;
+
+
+
+/*---------------------------------------------------------*/
 
 /*私有变量-------------------------------------------------*/
 
@@ -108,7 +114,7 @@ void UART3_vInit(void)
 	/* Set USART RX error IRQ 接收错误中断*/
 	stcIrqRegiCfg.enIRQn = Int026_IRQn;
 	stcIrqRegiCfg.pfnCallback = &Usart3ErrIrqCallback;
-	stcIrqRegiCfg.enIntSrc = INT_USART2_EI;
+	stcIrqRegiCfg.enIntSrc = INT_USART3_EI;
 	enIrqRegistration(&stcIrqRegiCfg);
 	NVIC_SetPriority(stcIrqRegiCfg.enIRQn, DDL_IRQ_PRIORITY_05);
 	NVIC_ClearPendingIRQ(stcIrqRegiCfg.enIRQn);
@@ -203,7 +209,6 @@ static void UART3_vDmaInit(void)
 
 	/* 这里先不使能，等到DMA接收的时候才使能*/
 	DMA_ChannelCmd(DMA_UNIT_UART3_RX, DMA_CH_UART3_RX, Disable);
-
 	/* Clear DMA flag. */
 	DMA_ClearIrqFlag(DMA_UNIT_UART3_TX, DMA_CH_UART3_TX, TrnCpltIrq);
 	DMA_ClearIrqFlag(DMA_UNIT_UART3_RX, DMA_CH_UART3_RX, TrnCpltIrq);
@@ -218,7 +223,7 @@ static void UART3_vDmaInit(void)
 	/* Set Uart Tx DMA block transfer complete IRQ DMA块发送完成中断*/
 	stcIrqRegiCfg.enIRQn = Int025_IRQn;
 	stcIrqRegiCfg.pfnCallback = &Uart3TxDmaBtcIrqCallback;
-	stcIrqRegiCfg.enIntSrc = INT_DMA1_BTC2;
+	stcIrqRegiCfg.enIntSrc = INT_DMA1_BTC0;
 	enIrqRegistration(&stcIrqRegiCfg);
 	NVIC_SetPriority(stcIrqRegiCfg.enIRQn, DDL_IRQ_PRIORITY_03);
 	NVIC_ClearPendingIRQ(stcIrqRegiCfg.enIRQn);
@@ -242,10 +247,10 @@ void UART_vTransmitDMA(UART_HandleTypeDef* ptUartHandler, TDmaBuffDef* ptDmaBuff
 
 #if 1
 	DMA_SetTransferCnt(ptUartHandler->ptTxDmaReg, ptUartHandler->ucTxDmaCh, ptDmaBuff->uiDataLen - 1);
-	DMA_SetSrcAddress(ptUartHandler->ptTxDmaReg, ptUartHandler->ucTxDmaCh, (uint32_t)&ptDmaBuff->ucData[0]);    //!< start from byte 1
+	DMA_SetSrcAddress(ptUartHandler->ptTxDmaReg, ptUartHandler->ucTxDmaCh, (uint32_t)&ptDmaBuff->ucData[1]);    //!< start from byte 1
 	DMA_ChannelCmd(ptUartHandler->ptTxDmaReg, ptUartHandler->ucTxDmaCh, Enable);
 
-	USART_SendData(ptUartHandler->USARTx, ptDmaBuff->ucData[0]);    //!< send byte 0 to trigger dma transmission
+	USART_SendData(ptUartHandler->USARTx, ptDmaBuff->ucData[0]);    //!< send byte 0 to trigger dma transmission 发送byte0触发DMA发送
 #else
 	DMA_SetTransferCnt(ptUartHandler->ptTxDmaReg, ptUartHandler->ucTxDmaCh, ptDmaBuff->uiDataLen);
 	DMA_SetSrcAddress(ptUartHandler->ptTxDmaReg, ptUartHandler->ucTxDmaCh, (uint32_t)ptDmaBuff->ucData);

@@ -58,7 +58,7 @@
 #include "hc32_common.h"
 #include "ddl_config.h"
 
-#if (DDL_TIMERA_ENABLE == DDL_ON)
+#if (DDL_TIMERA_ENABLE == DDL_ON)  
 
 /* C binding of definitions if building with C++ compiler */
 #ifdef __cplusplus

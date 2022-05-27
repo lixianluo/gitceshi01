@@ -17,13 +17,13 @@
 #include "flash.h"
 #include "app_display.h"
 #include "app_key.h"
+#include "app_IOT2Board.h"
 
 #define DBG_TAG "main"
 #define DBG_LVL DBG_INFO
 #include <rtdbg.h>
 
 
-/*---------------------------------------------------------------*/
 
 /*私有变量-------------------------------------------------------*/
 static TtimeInfo time_tInfo;
@@ -51,7 +51,6 @@ static void TMR_vTickUpdate(void);
 
 int32_t main(void)
 {
-
 	LOG_I("main fun is running");
 
 
@@ -67,14 +66,17 @@ int32_t main(void)
 		RT_TIMER_FLAG_PERIODIC | RT_TIMER_FLAG_SOFT_TIMER);
 	if (hundreds_millisecond_timer != RT_NULL)rt_timer_start(hundreds_millisecond_timer);
 
-
-
 	while(1)
 	{
 		if (TMR_bIsTimeExpired(TMR_BULE_LED))
 		{
 			TMR_vSetTime_100msValue(TMR_BULE_LED, 5);
 			BLUE_TOGGLE();
+		}
+		if (TMR_bIsTimeExpired(TMR_SYS_USART_SEND))
+		{
+			TMR_vSetTime_100msValue(TMR_SYS_USART_SEND, 200);
+			IOT_vTransmitMessage(IOT_MSG_INFO_REPORT);
 		}
 		switch (SysTaskState)
 		{
@@ -147,7 +149,6 @@ int32_t main(void)
 			default:break;
 		
 		}
-		
 		rt_thread_mdelay(10);
 	}
 }
@@ -155,6 +156,7 @@ int32_t main(void)
 static void one_msecond_timeout(void* parameter)
 {
 	time_tInfo.systick_s++;
+	time_tInfo.IOT_systick_min = time_tInfo.systick_hrs * 60 + time_tInfo.systick_min;
 	if ((time_tInfo.systick_s % 60) == 0)
 	{
 		time_tInfo.systick_s = 0;
@@ -163,6 +165,12 @@ static void one_msecond_timeout(void* parameter)
 		{
 			time_tInfo.systick_min = 0;
 			time_tInfo.systick_hrs++;
+			if (time_tInfo.systick_hrs == 10000000)	//LCD显示位数最大值
+			{
+				time_tInfo.systick_hrs = 0;
+				time_tInfo.IOT_systick_min = 0;
+				time_tInfo.systick_min = 0;
+			}
 		}
 	}
 	
@@ -206,3 +214,10 @@ TtimeInfo* Main_ptGetInfo(void)
 {
 	return &time_tInfo;
 }
+
+
+
+
+
+
+

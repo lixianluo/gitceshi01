@@ -383,7 +383,7 @@ static void ADC_vValueHanler0(uint32_t ulAdValue)
 {
 	float fAdcurrent = 0;
 	fAdcurrent = ((float)(ulAdValue - 886.663701f)) / 31.6106517f;   //886.663701和31.6106517都是硬件上面计算得来
-	ADC_tInfo.fConvertValue[ADC_IDX_1] = fAdcurrent;
+	ADC_tInfo.fConvertValue[ADC_IDX_0] = fAdcurrent;
 
 }
 static void ADC_vValueHanler1(uint32_t ulAdValue)
@@ -412,7 +412,7 @@ static void ADC_vValueHanler4(uint32_t ulAdValue)
 int ADC_iTaskHandler(void)
 {
     rt_thread_t tid;
-    /* 创建test线程 */
+    /* 创建ADC_vTaskHandler_entry线程 */
     tid = rt_thread_create("ADC_vTaskHandler_entry",
                             ADC_vTaskHandler_Entry,
                             RT_NULL,

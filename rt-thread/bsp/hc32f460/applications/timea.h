@@ -38,6 +38,6 @@ typedef enum
 
 extern void Timera_vInit(void);
 extern void Timera_Motor_Contorl(Motor_Swicth motor, en_functional_state_t control, uint8_t percent);
-
+extern void TIMER0_vInit(void);
 
 #endif // !_TIMEA_H_

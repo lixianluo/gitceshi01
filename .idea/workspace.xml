@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7f41c5e4-8f37-495e-b5c0-cf396e88cdf5" name="变更" comment="">
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/Libraries/HC32F460_StdPeriph_Driver/inc/hc32f46x_timer0.h" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/Libraries/HC32F460_StdPeriph_Driver/inc/hc32f46x_timer0.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/Libraries/HC32F460_StdPeriph_Driver/inc/hc32f46x_timera.h" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/Libraries/HC32F460_StdPeriph_Driver/inc/hc32f46x_timera.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/Libraries/HC32F460_StdPeriph_Driver/src/hc32f46x_timer0.c" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/Libraries/HC32F460_StdPeriph_Driver/src/hc32f46x_timer0.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/adc.c" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/adc.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/app_display.c" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/app_display.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/app_display.h" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/app_display.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/app_error.c" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/app_error.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/app_error.h" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/app_error.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/app_key.c" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/app_key.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/app_key.h" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/app_key.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/app_motor.h" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/app_motor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/main.h" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/main.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/time0.c" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/time0.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/time0.h" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/time0.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/timea.h" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/timea.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/usart.c" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/usart.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/usart.h" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/applications/usart.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/project.uvoptx" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/project.uvoptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/project.uvprojx" beforeDir="false" afterPath="$PROJECT_DIR$/rt-thread/bsp/hc32f460/project.uvprojx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="29jvi3kfxsHxOBgFHLkYmJ9Ic25" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="7f41c5e4-8f37-495e-b5c0-cf396e88cdf5" name="变更" comment="" />
+      <created>1653639434836</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653639434836</updated>
+    </task>
+    <servers />
+  </component>
+</project>
