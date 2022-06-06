@@ -259,11 +259,11 @@ void FLASH_vSaveData(void)
 	FLASH_tFlashInfo.ulWriteCounter++;		//!< record flash write counter for system tracking use
 	(void)memcpy(&ucTempData[FLASH_OFFSET_WRITE_COUNTER], (uint8_t*)&FLASH_tFlashInfo.ulWriteCounter, 4u);	//!< 4 bytes
 
-	/**vacuum lifetime on time in seconds*/
+	/**将小时存入Flash*/
 	uint32_t temp_value = APP_Display_save_hrs_time();
 	(void)memcpy(&ucTempData[FLASH_ADD_TIME_HRS], (uint8_t*)&temp_value, 4u);	//!< 4 bytes
 
-	/**valve lifetime on time in seconds*/
+	/**将分钟存入Flash*/
 	temp_value = APP_Display_save_min_time();
 	(void)memcpy(&ucTempData[FLASH_ADD_TIME_MIN], (uint8_t*)&temp_value, 4u);	//!< 4 bytes
 
@@ -315,7 +315,7 @@ static void FLASH_vTaskHandler_Entry(void* parameter)
 			{
 				if (FLASH_ucInitData())	//flash init is finished,and then read data from flash
 				{
-					FLASH_tFlashInfo.tTaskState = FLASH_TASK_READ_DONE;		//switch running state -> run
+					FLASH_tFlashInfo.tTaskState = FLASH_TASK_READ_DONE;		
 				}
 				break;
 			}

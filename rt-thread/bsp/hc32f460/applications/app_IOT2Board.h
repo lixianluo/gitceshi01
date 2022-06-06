@@ -16,7 +16,7 @@
 
 
 #define DEF_SET(VAR1,VAR2)		((VAR1) |= (VAR2))		//位操作：设置位
-#define DEF_RES(VAR1,VAR2)		((VAR1) &=~ (VAR2))		//位操作：清楚位
+#define DEF_RES(VAR1,VAR2)		((VAR1) &=~ (VAR2))		//位操作：清除位
 #define DEF_TEST(VAR1,VAR2)		(((VAR1) & (VAR2)) == (VAR2))	
 
 

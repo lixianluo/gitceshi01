@@ -31,6 +31,7 @@ typedef enum {
 /*¶ÔÍâº¯Êý-------------------------------------------------------*/
 
 extern TtimeInfo* Main_ptGetInfo(void);
+
 extern uint8_t TMR_bIsTimeExpired(TSWTimerIndex tTimerIndex);
 
 extern void TMR_vSetTime_100msValue(TSWTimerIndex tTimerIndex, uint32_t ulValue);

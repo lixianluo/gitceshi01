@@ -29,7 +29,7 @@ static  rt_sem_t usart3_tx_sem = RT_NULL;			//发送信号量
 /*私有函数-----------------------------------------------------------------------*/
 
 static void IOT_vTxInfo(TIOTMsgObjDef* tObject);		//IOT发送回调函数
-static void IOT_vRxInfo(TIOTMsgObjDef* tObject);		//测试
+static void IOT_vRxInfo(TIOTMsgObjDef* tObject);		//IOT接收回调函数
 
 static uint8_t IOT_ucGetTransmitMessageIndex(void);								 //得到发送列表序号
 static uint8_t IOT_ucGetReceptionMessageIndex(uint8_t ucMsgUID);				 //得到接收列表序号

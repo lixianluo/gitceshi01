@@ -67,7 +67,7 @@ static void MOTOR_vTaskHandler_Entry(void* parameter)
         Off_key_Flag = Key_ptGetInfo()->Off_key_Flag;
         Hand_FLag = Key_ptGetInfo()->Hand_FLag;
         /*елк╒╣Г╩З*/
-        if ((Hand_FLag == 0) && ((Brush_key_Flag == 1)||(All_key_Flag == 1)))
+        if ((Hand_FLag == 1) && ((Brush_key_Flag == 1)||(All_key_Flag == 1)))
         {
             PORT_SetBits(VALVE_PORT, VALVE_PIN);
             Brush_Work_Speed_vTaskHandler();

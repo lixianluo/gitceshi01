@@ -70,12 +70,12 @@ int32_t main(void)
 	{
 		if (TMR_bIsTimeExpired(TMR_BULE_LED))
 		{
-			TMR_vSetTime_100msValue(TMR_BULE_LED, 5);
+			TMR_vSetTime_100msValue(TMR_BULE_LED, 5);		//500ms周期
 			BLUE_TOGGLE();
 		}
 		if (TMR_bIsTimeExpired(TMR_SYS_USART_SEND))
 		{
-			TMR_vSetTime_100msValue(TMR_SYS_USART_SEND, 200);
+			TMR_vSetTime_100msValue(TMR_SYS_USART_SEND, 200);	//200*100ms=20s
 			IOT_vTransmitMessage(IOT_MSG_INFO_REPORT);
 		}
 		switch (SysTaskState)
@@ -106,7 +106,7 @@ int32_t main(void)
 				if (Key_ptGetInfo()->Off_key_Flag == 1) //有关机标志位
 				{
 					Flash_ptGetInfo()->tTaskState = FLASH_TASK_SAVE;
-					TMR_vSetTime_100msValue(TMR_SYS_CLOSE_DELAY, 15);
+					TMR_vSetTime_100msValue(TMR_SYS_CLOSE_DELAY, 15);	//15*100ms=1.5s
 					SysTaskState = SYS_TASK_CLOSE;
 				}
 				else if(Display_ptGetInfo()->tTaskState == DISPLAY_TASK_START_UP_DONE)
@@ -214,6 +214,7 @@ TtimeInfo* Main_ptGetInfo(void)
 {
 	return &time_tInfo;
 }
+
 
 
 

@@ -36,7 +36,7 @@
 #define ALL_START_PIN						(Pin07)		//盘刷 + 吸风启动
 
 #define HAND_PORT							(PortA)		//把手开关
-#define HAND_PIN							(Pin01)		//把手开关
+#define HAND_PIN							(Pin02)		//把手开关
 
 
 /*模拟通讯-------------------------------------------------------------------------*/

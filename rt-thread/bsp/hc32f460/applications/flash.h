@@ -33,7 +33,7 @@
 #define FLASH_SEG_INDEX_END		127					//!< segment (one page = 16segment)
 #define FLASH_PAGE_INDEX_END	7					//!< 4 pages (for data storage; page124 ~ page127)
 
-#define FLASH_PAGE_SIZE			0x800			//!< one page size = 2048 = 0x800
+#define FLASH_PAGE_SIZE			0x800				//!< one page size = 2048 = 0x800
 #define FLASH_SEG_SIZE			0x10				//!< one segment size = 16bytes, this is the size of user data area
 
 #define FLASH_DATA_FLAG			0xA5				//!< flash data flag
@@ -44,14 +44,14 @@
  ******************************************************************************************************************/
 enum {
 	/**Reserve area start, do not modify*/
-	FLASH_OFFSET_FLAG = 0,					  	//!< data flag(data is stored here)			--- 1 byte
+	FLASH_OFFSET_FLAG = 0,					  	//!< data flag(data is stored here)				--- 1 byte
 	FLASH_OFFSET_SEG_SIZE = 1,				  		//!< segment size(fixed)					--- 1 byte
 	FLASH_OFFSET_SEG_INDEX = 2,				  		//!< segment index(changeable)				--- 1 byte
-	FLASH_OFFSET_PAGE_INDEX = 3,			  			//!< page index(changeable)					--- 1 byte
+	FLASH_OFFSET_PAGE_INDEX = 3,			  			//!< page index(changeable)				--- 1 byte
 	/**Reserve area end-----------------*/
-	FLASH_OFFSET_WRITE_COUNTER = 4,			//!< total write times of flash				--- 4 bytes
-	FLASH_ADD_TIME_HRS = 8,			//!< 存在Flash里面的小时时间增量			--- 4 bytes
-	FLASH_ADD_TIME_MIN = 12,			//!< 存在Flash里面的分钟时间增量			--- 4 bytes 
+	FLASH_OFFSET_WRITE_COUNTER = 4,			//!< total write times of flash						--- 4 bytes
+	FLASH_ADD_TIME_HRS = 8,			//!< 存在Flash里面的小时时间								--- 4 bytes
+	FLASH_ADD_TIME_MIN = 12,			//!< 存在Flash里面的分钟时间							--- 4 bytes 
 };
 
 
@@ -84,14 +84,12 @@ typedef struct _TFlashInfo {
 
 extern void FLASH_vReadByte(uint32_t ulTargetAddr, uint8_t* pucData, uint32_t uiLen);	//read one byte from flash
 extern void FLASH_WriteByte(uint32_t ulAddr, uint8_t* pucData, uint32_t uiDataLen);	//write bytes into flash
-extern void FLASH_vErasePage(uint32_t ulAddress, uint8_t ucPageNum);
 
-extern uint8_t FLASH_bIsInitDone(void);											//flash init is done
+
+
 extern void FLASH_vSaveData(void);												//save data into flash
-extern void FLASH_vTaskHandler(void);											//flash task
 
 
-extern void FLASH_vSetWriteRequest(void);
 
 extern TFlashInfo* Flash_ptGetInfo(void);
 #endif

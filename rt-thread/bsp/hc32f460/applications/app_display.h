@@ -12,6 +12,7 @@ typedef enum {
 	DISPLAY_TASK_RUN,			//空闲显示
 	DISPLAY_TASK_ERROR,			//错误显示
 	DISPLAY_TASK_CLOSE,			//关机显示
+	DISPLAY_TASK_REBOOT,		//重启1602
 }TDisplayTaskState;
 
 typedef struct {
