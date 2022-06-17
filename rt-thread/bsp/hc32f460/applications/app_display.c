@@ -110,6 +110,8 @@ static void Display_vTaskHandler_entry(void* parameter)
             }
             case DISPLAY_TASK_START_UP_DONE:             //LCD1602开机显示完成           {
                 break;
+						{
+							
             }
             case DISPLAY_TASK_RUN:                 //LCD1602空闲显示(电量+累计时间)
             {
