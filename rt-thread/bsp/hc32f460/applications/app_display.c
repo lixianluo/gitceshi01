@@ -9,6 +9,7 @@
 #include "flash.h"
 #include "gpio.h"
 #include "hc32f460_gpio.h"
+#include "app_error.h"
 
 /*私有变量-------------------------------------------------------*/
 static uint8_t  Compare_buff_1[16] = {0};
@@ -16,15 +17,13 @@ static uint8_t  Compare_buff_2[16] = {0};
 static DisplayTaskDef DisplayTaskState;
 static uint32_t systick_100ms,systick_s, systick_min, systick_hrs;
 
+/*开机显示-------------------------------------------------------------------------*/
 static const uint8_t company[] = { "Taung           " };
-static const uint8_t clear[16] = { 0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20,0x20 };//清屏写入
+static const uint8_t version[] = { "P2001_0_0_V0.0.2" };
+/*----------------------------------------------------------------------------------*/
 
-static const uint8_t time[] = { "OpHrs:" };
 
-static const uint8_t close[] = { "Please wait ... " };
-
-static const uint8_t version[] = {"P2001_0_0_V0.0.1"};
-
+/*空闲显示--------------------------------------------------------------------------*/
 static const uint8_t battery[11][14] =
 {
     {0x45,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x5F,0x46,0x20,0x20 },//E__________F
@@ -39,8 +38,37 @@ static const uint8_t battery[11][14] =
     {0x45,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0x5F,0x46,0x20,0x20 },//E*********_F
     {0x45,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0x46,0x20,0x20 },//E**********F 
 };
-/*---------------------------------------------------------------*/
+static const uint8_t time[] = { "OpHrs:" };
+/*------------------------------------------------------------------------------------*/
 
+
+/*关机显示----------------------------------------------------------------------------*/
+static const uint8_t close[] = { "Please wait ... " };
+/*------------------------------------------------------------------------------------*/
+
+
+/*错误代码显示------------------------------------------------------------------------*/
+static const uint8_t error1[][17] =
+{
+    {"     Battery     "},{" Empty  Voltage  "},
+    {"     Battery     "},{" Under  Voltage  "},
+    {"     Battery     "},{" Over   Voltage  "},
+
+    
+    {"     Suction     "},{" Over   Current  "},
+    {"     Branch      "},{" Over   Current  "},
+
+    {"     Suction     "},{" Open   Circuit  "},
+    {"     Branch      "},{" Open   Circuit  "},
+};
+
+/*------------------------------------------------------------------------------------*/
+
+
+/*清屏显示----------------------------------------------------------------------------*/
+static const uint8_t clear[16] = { 0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20,0x20 };//清屏写入
+static const uint8_t clear_1[14] = { 0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 ,0x20 };//低电量闪烁
+/*------------------------------------------------------------------------------------*/
 
 /*私有函数-------------------------------------------------------*/
 static void Display_vTaskHandler_entry(void* parameter);
@@ -88,7 +116,7 @@ static void Display_vTaskHandler_entry(void* parameter)
             case DISPLAY_TASK_INIT:                  //LCD1602初始化显示
             {
                 IIC_LCD1602_Write_Init();                   //1602写入初始化
-                IIC_LCE1602_WIFI_Init();                    //1602wifi符号初始化
+                IIC_LCD1602_WIFI_Init();                    //1602wifi符号初始化
                 TMR_vSetTime_100msValue(TMR_DISPLAY_START_VERSION, 15);
                 TMR_vSetTime_100msValue(TMR_DISPLAY_START_LOGO, 30);
                 TMR_vSetTime_100msValue(TMR_DISPLAY_WIFI, 100);
@@ -108,10 +136,9 @@ static void Display_vTaskHandler_entry(void* parameter)
                 }
                 break;
             }
-            case DISPLAY_TASK_START_UP_DONE:             //LCD1602开机显示完成           {
-                break;
-						{
-							
+            case DISPLAY_TASK_START_UP_DONE:             //LCD1602开机显示完成           
+            {
+                break;	
             }
             case DISPLAY_TASK_RUN:                 //LCD1602空闲显示(电量+累计时间)
             {
@@ -132,7 +159,7 @@ static void Display_vTaskHandler_entry(void* parameter)
             case DISPLAY_TASK_REBOOT:               //LCD1602重启
             {
                 IIC_LCD1602_Write_Init();                   //1602写入初始化
-                IIC_LCE1602_WIFI_Init();                    //1602wifi符号初始化
+                IIC_LCD1602_WIFI_Init();                    //1602wifi符号初始化
                 DisplayTaskState.tTaskState = DISPLAY_TASK_RUN;
                 break;
             }              
@@ -142,7 +169,6 @@ static void Display_vTaskHandler_entry(void* parameter)
 	  {
 	      DisplayErrorHandler();
 	  }
-      
 	    rt_thread_mdelay(10);
     }
 }
@@ -216,17 +242,38 @@ static void Display_Run(void)
     }
     if ((ADC_ptGetInfo()->supply_voltage >= 22.4f) && (ADC_ptGetInfo()->supply_voltage < 22.6f))
     {
-        IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[2]), (uint8_t*)battery[2]);
+        if (systick_100ms < 5)
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[2]), (uint8_t*)battery[2]);
+        }
+        else
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(clear_1), (uint8_t*)clear_1);
+        }
         DisplayTaskState.batter_info = 2;
     }
     if ((ADC_ptGetInfo()->supply_voltage >= 22.2f) && (ADC_ptGetInfo()->supply_voltage < 22.4f))
     {
-        IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[1]), (uint8_t*)battery[1]);
+        if (systick_100ms < 5)
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[1]), (uint8_t*)battery[1]);
+        }
+        else
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(clear_1), (uint8_t*)clear_1);
+        }
         DisplayTaskState.batter_info = 1;
     }
     if (ADC_ptGetInfo()->supply_voltage < 22.2f)
     {
-        IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[0]), (uint8_t*)battery[0]);
+        if (systick_100ms < 5)
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[0]), (uint8_t*)battery[0]);
+        }
+        else
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(clear_1), (uint8_t*)clear_1);
+        }
         DisplayTaskState.batter_info = 0;
     }
     Display_UseTime();
@@ -243,14 +290,10 @@ static void Display_Run(void)
     {
         Display_WIFI_Filp();
     }
- 
-    
- 
 }
 
 static void Display_UseTime(void)
 {
-
     IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE2_START, sizeof(time)-1, (uint8_t*)time);
 
     IIC_LCD1602_Write_Number(LCD_DDRAM_ADDR_TIME_HRS_START, systick_hrs);
@@ -263,27 +306,42 @@ static void Display_WIFI_Filp(void)	//500ms亮500ms灭
 {
     if (systick_100ms < 5)			
     {
-        IIC_LCE1602_WIFI_Display();
-
+        IIC_LCD1602_WIFI_Display();
     }
     else
     {
-        IIC_LCE1602_WIFI_Not_Display();
+        IIC_LCD1602_WIFI_Not_Display();
     }
 }
 static void Display_WIFI_ON(void)
 {
-    IIC_LCE1602_WIFI_Display();
+    IIC_LCD1602_WIFI_Display();
 }
 static void Display_WIFI_OFF(void)
 {
-    IIC_LCE1602_WIFI_Not_Display();
+    IIC_LCD1602_WIFI_Not_Display();
 }
 static void Display_Error(void)
 {
-    ;
-
+    static uint8_t i = 0;
+    if (Error_GetInfo() >>(i/2)&0x01)	    //判断是否有错误码
+    {		
+        if (TMR_bIsTimeExpired(TMR_DISPLAY_ERROR))
+        {
+            TMR_vSetTime_100msValue(TMR_DISPLAY_ERROR, 20);
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(error1[i]) - 1, (uint8_t*)error1[i]);
+            i++;
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE2_START, sizeof(error1[i]) - 1, (uint8_t*)error1[i]);
+            i++;
+        }
+        if (i >= ERROR_NUM * 2) { i = 0; }
+    }
+    else
+    {
+        i++;
+    }
 }
+
 static void Display_Close(void)
 {
     IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(close) - 1, (uint8_t*)close);
@@ -295,20 +353,76 @@ static void DisplayErrorHandler(void)
 {
     IIC_LCD1602_Read_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(Compare_buff_1), (uint8_t*)Compare_buff_1);
     IIC_LCD1602_Read_String(LCD_DDRAM_ADDR_LINE2_START, sizeof(Compare_buff_2), (uint8_t*)Compare_buff_2);
-    if ((memcmp(Compare_buff_1, company, 10) == 0)||\
-       (memcmp(Compare_buff_1, battery, 1) == 0)||\
-       (memcmp(Compare_buff_1, version, 10) == 0) ||\
-       (memcmp(Compare_buff_1, close, 10) == 0) ||\
-	   (memcmp(Compare_buff_1, clear, 5) == 0))
+    switch (DisplayTaskState.tTaskState)
     {
-        return;
-    }
-    else
-    {
-        
-		DisplayTaskState.tTaskState = DISPLAY_TASK_INIT;
-	}
+        case DISPLAY_TASK_START_UP:
+        {
+             if ((memcmp(Compare_buff_1, company, 16) != 0) && \
+                 (memcmp(Compare_buff_1, version, 16) != 0) && \
+                 (memcmp(Compare_buff_1, clear, 16) != 0))
+             {
+                 DisplayTaskState.tTaskState = DISPLAY_TASK_REBOOT;
+             }
+             else
+             {
+                 return;
+             }
+            break;
+        }
+        case DISPLAY_TASK_RUN:
+        {
+            if ((memcmp(Compare_buff_1, battery[0], 14) != 0) && \
+                (memcmp(Compare_buff_1, battery[1], 14) != 0) && \
+                (memcmp(Compare_buff_1, battery[2], 14) != 0) && \
+                (memcmp(Compare_buff_1, battery[3], 14) != 0) && \
+                (memcmp(Compare_buff_1, battery[4], 14) != 0) && \
+                (memcmp(Compare_buff_1, battery[5], 14) != 0) && \
+                (memcmp(Compare_buff_1, battery[6], 14) != 0) && \
+                (memcmp(Compare_buff_1, battery[7], 14) != 0) && \
+                (memcmp(Compare_buff_1, battery[8], 14) != 0) && \
+                (memcmp(Compare_buff_1, battery[9], 14) != 0) && \
+                (memcmp(Compare_buff_1, battery[10], 14) != 0) && \
+                (memcmp(Compare_buff_1, clear, 14) != 0))
+            {
+                DisplayTaskState.tTaskState = DISPLAY_TASK_REBOOT;
+            }
+      
+            else if ((memcmp(Compare_buff_2, time, 6) != 0) && \
+                    (memcmp(Compare_buff_2, clear, 14) != 0))
+            {
+                DisplayTaskState.tTaskState = DISPLAY_TASK_REBOOT;
+            }
+            else
+            {
+                return;
+            }
 
+            break;
+        }
+        case DISPLAY_TASK_ERROR:
+        {
+
+            if ((memcmp(Compare_buff_1, error1[0], 16) != 0) && \
+                (memcmp(Compare_buff_1, error1[2], 16) != 0) && \
+                (memcmp(Compare_buff_1, clear, 14) != 0))
+            {
+                DisplayTaskState.tTaskState = DISPLAY_TASK_REBOOT;
+            }
+
+            else if ((memcmp(Compare_buff_2, error1[1], 16) != 0) && \
+                     (memcmp(Compare_buff_2, error1[3], 16) != 0) && \
+                     (memcmp(Compare_buff_2, clear, 14) != 0))
+            {
+                DisplayTaskState.tTaskState = DISPLAY_TASK_REBOOT;
+            }
+            else
+            {
+                return;
+            }
+            break;
+        }
+        default:break;
+    }
 }
 
 uint32_t APP_Display_read_hrs_time(uint32_t ulData)

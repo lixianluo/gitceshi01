@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>4</fileVersion>
+    <fileChecksum>1312161592</fileChecksum>
+    <configuration>
+        <name>Debug</name>
+        <outputs>
+            <file>$PROJ_DIR$\..\driver\src\hc32f46x_sram.c</file>
+            <file>$PROJ_DIR$\..\driver\src\hc32f46x_wdt.c</file>
+            <file>$PROJ_DIR$\startup_hc32f460keta.s</file>
+            <file>$PROJ_DIR$\..\source\Board2Board\Board2Board.c</file>
+            <file>$PROJ_DIR$\..\source\CAN\can.c</file>
+            <file>$PROJ_DIR$\..\source\main.c</file>
+            <file>$PROJ_DIR$\..\driver\src\hc32f46x_crc.c</file>
+            <file>$PROJ_DIR$\..\driver\src\hc32f46x_interrupts.c</file>
+            <file>$PROJ_DIR$\..\driver\src\hc32f46x_pwc.c</file>
+            <file>$PROJ_DIR$\..\driver\src\hc32f46x_usart.c</file>
+            <file>$PROJ_DIR$\..\source\GPIO\gpio.c</file>
+            <file>$PROJ_DIR$\..\source\sw_timer.c</file>
+            <file>$PROJ_DIR$\..\source\AlgorithmBoard\AlgorithmBoard.c</file>
+            <file>$PROJ_DIR$\..\source\task.c</file>
+            <file>$PROJ_DIR$\..\driver\src\hc32f46x_clk.c</file>
+            <file>$PROJ_DIR$\..\source\Timer\timer.c</file>
+            <file>$PROJ_DIR$\..\driver\src\hc32f46x_timer4_cnt.c</file>
+            <file>$PROJ_DIR$\..\source\can_iap.c</file>
+            <file>$PROJ_DIR$\..\source\flash.c</file>
+            <file>$PROJ_DIR$\..\source\tnd_fota.c</file>
+            <file>$PROJ_DIR$\..\source\UART\uart.c</file>
+            <file>$PROJ_DIR$\..\source\version.c</file>
+            <file>$PROJ_DIR$\..\driver\src\hc32f46x_gpio.c</file>
+            <file>$PROJ_DIR$\..\common\system_hc32f460keta.c</file>
+            <file>$PROJ_DIR$\..\driver\src\hc32f46x_efm.c</file>
+            <file>$PROJ_DIR$\..\driver\src\hc32f46x_dmac.c</file>
+            <file>$PROJ_DIR$\..\driver\src\hc32f46x_can.c</file>
+            <file>$PROJ_DIR$\..\driver\src\hc32f46x_utility.c</file>
+            <file>$PROJ_DIR$\..\driver\src\hc32f46x_timer0.c</file>
+            <file>$PROJ_DIR$\..\driver\inc\hc32f46x_pwc.h</file>
+            <file>$PROJ_DIR$\..\common\hc32_ddl.h</file>
+            <file>$TOOLKIT_DIR$\CMSIS\Core\Include\core_cm4.h</file>
+            <file>$TOOLKIT_DIR$\lib\rt7M_tl.a</file>
+            <file>$PROJ_DIR$\..\driver\inc\hc32f46x_efm.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_usart.xcl</file>
+            <file>$PROJ_DIR$\..\driver\inc\hc32f46x_icg.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_can.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_can.o</file>
+            <file>$PROJ_DIR$\output\debug\Obj\system_hc32f460keta.o</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_sram.xcl</file>
+            <file>$PROJ_DIR$\..\driver\inc\hc32f46x_timera.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\can_iap.o</file>
+            <file>$PROJ_DIR$\..\source\ddl_config.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Full.h</file>
+            <file>$PROJ_DIR$\..\driver\inc\hc32f46x_crc.h</file>
+            <file>$PROJ_DIR$\..\source\can_iap.h</file>
+            <file>$PROJ_DIR$\..\source\version.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_crc.xcl</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_crc.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_timer4_cnt.xcl</file>
+            <file>$PROJ_DIR$\output\debug\Obj\Board2Board.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\Board2Board.o</file>
+            <file>$PROJ_DIR$\..\source\Timer\timer.h</file>
+            <file>$PROJ_DIR$\..\common\hc32f460keta.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_sram.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_clk.xcl</file>
+            <file>$PROJ_DIR$\..\driver\inc\hc32f46x_utility.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\task.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\can_iap.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_timer0.o</file>
+            <file>$PROJ_DIR$\output\debug\Exe\hc32f460keta.out</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_timer4_cnt.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\task.xcl</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_pwc.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_interrupts.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\can.xcl</file>
+            <file>$PROJ_DIR$\output\debug\Obj\main.xcl</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_interrupts.xcl</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_dmac.xcl</file>
+            <file>$TOOLKIT_DIR$\CMSIS\Core\Include\cmsis_iccarm.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\wdt.xcl</file>
+            <file>$PROJ_DIR$\output\debug\Obj\version.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_interrupts.o</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_utility.xcl</file>
+            <file>$PROJ_DIR$\..\source\sw_timer.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\gpio.xcl</file>
+            <file>$TOOLKIT_DIR$\lib\m7M_tl.a</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_pwc.o</file>
+            <file>$PROJ_DIR$\output\debug\Obj\sw_timer.xcl</file>
+            <file>$PROJ_DIR$\output\debug\Obj\gpio.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_efm.xcl</file>
+            <file>$PROJ_DIR$\output\debug\Obj\flash.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\ymodem_ota.o</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_can.__cstat.et</file>
+            <file>$PROJ_DIR$\..\source\ymodem_ota.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\system_hc32f460keta.xcl</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_efm.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\AlgorithmBoard.xcl</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_utility.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_timer0.__cstat.et</file>
+            <file>$PROJ_DIR$\..\source\tnd_fota.h</file>
+            <file>$TOOLKIT_DIR$\CMSIS\Core\Include\mpu_armv7.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\can.o</file>
+            <file>$PROJ_DIR$\output\debug\Obj\wdt.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_gpio.xcl</file>
+            <file>$PROJ_DIR$\output\debug\Exe\hc32f460keta_boot.bin</file>
+            <file>$PROJ_DIR$\..\common\hc32_common.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_gpio.o</file>
+            <file>$PROJ_DIR$\..\driver\inc\hc32f46x_wdt.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\..\source\AlgorithmBoard\AlgorithmBoard.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f460keta.pbd</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_crc.o</file>
+            <file>$PROJ_DIR$\..\source\UART\uart.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\AlgorithmBoard.__cstat.et</file>
+            <file>$PROJ_DIR$\..\source\GPIO\gpio.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\flash.o</file>
+            <file>$PROJ_DIR$\output\debug\Obj\sw_timer.o</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_dmac.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_timer4_cnt.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_timer0.xcl</file>
+            <file>$PROJ_DIR$\..\driver\inc\hc32f46x_usart.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\flash.xcl</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_wdt.o</file>
+            <file>$PROJ_DIR$\..\driver\inc\hc32f46x_gpio.h</file>
+            <file>$TOOLKIT_DIR$\CMSIS\Core\Include\cmsis_version.h</file>
+            <file>$PROJ_DIR$\..\source\wdt.c</file>
+            <file>$PROJ_DIR$\output\debug\Obj\uart.o</file>
+            <file>$PROJ_DIR$\output\debug\Obj\task.o</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_sram.o</file>
+            <file>$PROJ_DIR$\output\debug\Obj\uart.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\wdt.o</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_usart.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_pwc.xcl</file>
+            <file>$PROJ_DIR$\..\driver\inc\hc32f46x_timer4_cnt.h</file>
+            <file>$TOOLKIT_DIR$\lib\dl7M_tlf.a</file>
+            <file>$PROJ_DIR$\..\driver\inc\hc32f46x_dmac.h</file>
+            <file>$PROJ_DIR$\..\driver\inc\hc32f46x_timer0.h</file>
+            <file>$PROJ_DIR$\..\driver\inc\hc32f46x_can.h</file>
+            <file>$PROJ_DIR$\..\common\system_hc32f460keta.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\main.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\..\source\CAN\can.h</file>
+            <file>$PROJ_DIR$\..\source\ymodem_ota.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\timer.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_clk.__cstat.et</file>
+            <file>$PROJ_DIR$\config\HC32F46x.icf</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_clk.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\main.__cstat.et</file>
+            <file>$PROJ_DIR$\..\source\task.h</file>
+            <file>$PROJ_DIR$\..\source\flash.h</file>
+            <file>$PROJ_DIR$\..\driver\inc\hc32f46x_sram.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\tnd_fota.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\ymodem_ota.xcl</file>
+            <file>$PROJ_DIR$\output\debug\Obj\AlgorithmBoard.o</file>
+            <file>$PROJ_DIR$\..\source\wdt.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_gpio.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\tnd_fota.o</file>
+            <file>$TOOLKIT_DIR$\CMSIS\Core\Include\cmsis_compiler.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\version.o</file>
+            <file>$PROJ_DIR$\output\debug\Obj\tnd_fota.xcl</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_wdt.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\version.xcl</file>
+            <file>$PROJ_DIR$\output\debug\Obj\startup_hc32f460keta.o</file>
+            <file>$PROJ_DIR$\output\debug\Obj\gpio.o</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_efm.o</file>
+            <file>$PROJ_DIR$\..\source\defines.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\Board2Board.xcl</file>
+            <file>$PROJ_DIR$\output\debug\Obj\uart.xcl</file>
+            <file>$PROJ_DIR$\output\debug\Obj\ymodem_ota.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\system_hc32f460keta.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\timer.xcl</file>
+            <file>$PROJ_DIR$\..\source\Board2Board\Board2Board.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\can_iap.xcl</file>
+            <file>$PROJ_DIR$\output\debug\Obj\timer.o</file>
+            <file>$PROJ_DIR$\output\debug\List\hc32f460keta.map</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_wdt.xcl</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_utility.o</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_dmac.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\iccarm_builtin.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\can.__cstat.et</file>
+            <file>$PROJ_DIR$\..\driver\inc\hc32f46x_interrupts.h</file>
+            <file>$PROJ_DIR$\..\driver\inc\hc32f46x_clk.h</file>
+            <file>$PROJ_DIR$\output\debug\Obj\sw_timer.__cstat.et</file>
+            <file>$PROJ_DIR$\output\debug\Obj\hc32f46x_usart.o</file>
+        </outputs>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 64 177</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\driver\src\hc32f46x_sram.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 128</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 56</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 41</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 152 104 148 38 71 107 45 57 36 60 80 81 140 143 55 31 124 159 74 181 99 138 44 59</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\driver\src\hc32f46x_wdt.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 122</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 162</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 178</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 106 104 148 38 71 107 45 57 36 60 80 81 140 143 55 31 124 159 74 181 99 138 44 59</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\startup_hc32f460keta.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 164</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\Board2Board\Board2Board.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 53</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 52</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 168</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 174 167 140 38 71 107 45 57 141 137 104 148 36 60 80 81 143 55 31 124 159 74 181 99 138 44 79 48 47</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\CAN\can.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 100</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 182</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 69</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 141 140 38 71 107 45 57 137 104 148 36 60 80 81 143 55 31 124 159 74 181 99 138 44 79 29 183 123 174 167 47</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 139</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 149</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 70</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 30 104 148 38 71 107 45 57 36 60 80 81 140 143 55 31 124 159 74 181 99 138 44 152 184 33 59 123 29 46 35 150 54 79 113 106 156 141 137 151 167 47 111 120 135</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\driver\src\hc32f46x_crc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 110</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 50</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 49</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 46 104 148 38 71 107 45 57 36 60 80 81 140 143 55 31 124 159 74 181 99 138 44 59</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\driver\src\hc32f46x_interrupts.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 77</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 68</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 72</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 183 104 148 38 71 107 45 57 36 60 80 81 140 143 55 31 124 159 74 181 99 138 44 59</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\driver\src\hc32f46x_pwc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 85</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 67</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 132</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 29 104 148 38 71 107 45 57 36 60 80 81 140 143 55 31 124 159 74 181 99 138 44 59</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\driver\src\hc32f46x_usart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 186</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 131</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 34</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 120 104 148 38 71 107 45 57 36 60 80 81 140 143 55 31 124 159 74 181 99 138 44 59</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\GPIO\gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 165</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 87</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 82</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 113 140 38 71 107 45 57 123 104 148 36 60 80 81 143 55 31 124 159 74 181 99 138 44</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\sw_timer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 115</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 185</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 86</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 79 140 38 71 107 45 57</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\AlgorithmBoard\AlgorithmBoard.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 155</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 112</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 95</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 108 167 140 38 71 107 45 57 111 120 104 148 36 60 80 81 143 55 31 124 159 74 181 99 138 44 123 135 113 79 136 92</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\task.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 127</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 61</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 66</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 150 140 38 71 107 45 57 59 104 148 36 60 80 81 143 55 31 124 159 74 181 99 138 44 141 137 79 174 167 47 98 92</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\driver\src\hc32f46x_clk.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 147</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 145</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 58</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 184 104 148 38 71 107 45 57 36 60 80 81 140 143 55 31 124 159 74 181 99 138 44 59</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\Timer\timer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 176</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 144</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 173</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 54 136 104 148 38 71 107 45 57 36 60 80 81 140 143 55 31 124 159 74 181 99 138 44 133 42 183 29 79 113 123</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\driver\src\hc32f46x_timer4_cnt.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 117</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 65</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 51</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 133 104 148 38 71 107 45 57 36 60 80 81 140 143 55 31 124 159 74 181 99 138 44 59</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\can_iap.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 43</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 62</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 175</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 47 167 140 38 71 107 45 57 148 36 143 141 137 104 60 80 81 55 31 124 159 74 181 99 138 44 174 79 151 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\flash.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 114</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 89</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 121</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 151 167 140 38 71 107 45 57 33 104 148 36 60 80 81 143 55 31 124 159 74 181 99 138 44 113 123</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\tnd_fota.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 158</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 153</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 161</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 98 167 140 38 71 107 45 57 151 183 104 148 36 60 80 81 143 55 31 124 159 74 181 99 138 44 29 46 79 47 92 174 141 137</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\UART\uart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 126</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 129</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 169</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 111 140 38 71 107 45 57 120 104 148 36 60 80 81 143 55 31 124 159 74 181 99 138 44 123 135 29 136 183 113 108 167</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\version.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 160</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 76</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 163</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 48 167 140 38 71 107 45 57</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\driver\src\hc32f46x_gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 105</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 157</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 102</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 123 104 148 38 71 107 45 57 36 60 80 81 140 143 55 31 124 159 74 181 99 138 44 59</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\common\system_hc32f460keta.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 40</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 171</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 93</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 104 148 38 71 107 45 57 36 60 80 81 140 143 55 31 124 159 74 181 99 138</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\driver\src\hc32f46x_efm.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 166</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 94</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 88</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 33 104 148 38 71 107 45 57 36 60 80 81 140 143 55 31 124 159 74 181 99 138 44 59</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\driver\src\hc32f46x_dmac.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 180</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 116</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 73</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 135 104 148 38 71 107 45 57 36 60 80 81 140 143 55 31 124 159 74 181 99 138 44 59</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\driver\src\hc32f46x_can.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 39</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 91</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 37</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 137 104 148 38 71 107 45 57 36 60 80 81 140 143 55 31 124 159 74 181 99 138 44 59</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\driver\src\hc32f46x_utility.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 179</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 96</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 78</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 59 104 148 38 71 107 45 57 36 60 80 81 140 143 55 31 124 159 74 181 99 138 44</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\driver\src\hc32f46x_timer0.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 63</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 97</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 119</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 136 104 148 38 71 107 45 57 36 60 80 81 140 143 55 31 124 159 74 181 99 138 44 59</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\output\debug\Exe\hc32f460keta.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 177</file>
+                </tool>
+                <tool>
+                    <name>OBJCOPY</name>
+                    <file> 103</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 146 155 53 100 43 114 165 39 147 110 180 166 105 77 85 128 63 117 186 179 122 139 164 115 40 127 176 158 126 160 130 90 84 32 83 134</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\wdt.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 130</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 101</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 75</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 156 106 104 148 38 71 107 45 57 36 60 80 81 140 143 55 31 124 159 74 181 99 138 44</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\source\ymodem_ota.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 90</file>
+                </tool>
+                <tool>
+                    <name>__cstat</name>
+                    <file> 170</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 154</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 92 167 140 38 71 107 45 57 148 36 143 118 172 111 120 104 60 80 81 55 31 124 159 74 181 99 138 44 123 135 79 108 113 151 47</file>
+                </tool>
+            </inputs>
+        </file>
+    </configuration>
+    <configuration>
+        <name>Release</name>
+        <outputs />
+        <forcedrebuild>
+            <name>[MULTI_TOOL]</name>
+            <tool>ILINK</tool>
+        </forcedrebuild>
+    </configuration>
+</project>

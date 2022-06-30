@@ -27,7 +27,6 @@ static  rt_sem_t usart3_tx_sem = RT_NULL;			//发送信号量
 /*-------------------------------------------------------------------------------*/
 
 /*私有函数-----------------------------------------------------------------------*/
-
 static void IOT_vTxInfo(TIOTMsgObjDef* tObject);		//IOT发送回调函数
 static void IOT_vRxInfo(TIOTMsgObjDef* tObject);		//IOT接收回调函数
 
@@ -44,7 +43,7 @@ static void IOT_vReceptionHandler_entry(void* parameter);						 //接收任务线程
 
 /*发送消息列表-------------------------------------------------------------------*/
 static const TIOTMsgTbDef IOT_tTransmitTb[] = {
-	/*msgid*/			/*call back function*/
+	/*msgid*/					/*call back function*/
 	{IOT_INFO_REPORT,				IOT_vTxInfo},
 
 };
@@ -52,8 +51,8 @@ static const TIOTMsgTbDef IOT_tTransmitTb[] = {
 
 /*接收消息列表-------------------------------------------------------------------*/
 static const TIOTMsgTbDef IOT_tReceiveTb[] = {
-	/*msgid*/			/*call back function*/
-	{0x01,				IOT_vRxInfo},
+	/*msgid*/					/*call back function*/
+	{IOT_INFO_REPORT,				IOT_vRxInfo},
 
 };
 /*-------------------------------------------------------------------------------*/
@@ -133,10 +132,10 @@ static void IOT_vTxInfo(TIOTMsgObjDef* tObject)
 	tObject->payload[3] = (Main_ptGetInfo()->IOT_systick_min >> 16 & 0xFF);
 	tObject->payload[4] = (Main_ptGetInfo()->IOT_systick_min >> 24 & 0xFF);
 	tObject->payload[5] = Display_ptGetInfo()->batter_info;
-	tObject->payload[6] = Error_ptGetInfo() & 0xFF;
-	tObject->payload[7] = Error_ptGetInfo() >> 8 & 0xFF;
-	tObject->payload[8] = Error_ptGetInfo() >> 16 & 0xFF;
-	tObject->payload[9] = Error_ptGetInfo() >> 24 & 0xFF;
+	tObject->payload[6] = Error_GetInfo() & 0xFF;
+	tObject->payload[7] = Error_GetInfo() >> 8 & 0xFF;
+	tObject->payload[8] = Error_GetInfo() >> 16 & 0xFF;
+	tObject->payload[9] = Error_GetInfo() >> 24 & 0xFF;
 	Number_of_Transmit++;
 }
 static void IOT_vRxInfo(TIOTMsgObjDef* tObject)
@@ -156,7 +155,7 @@ static uint8_t IOT_ucGetTransmitMessageIndex(void)
 		}
 	}
 
-	return 0xFF;	//!< 没有发现
+	return 0xFF;	//!< 没有发现 (注：发送列表不得大于这个数值)
 }
 
 static uint8_t IOT_ucGetReceptionMessageIndex(uint8_t msgid)

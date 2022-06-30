@@ -2,6 +2,9 @@
 #include <rtthread.h>
 #include "hc32f460_wdt.h"
 
+
+
+
 static void WDT_vTaskHandler_Entry(void* parameter);
 int WDT_iTaskHandler(void)
 {
@@ -20,12 +23,11 @@ int WDT_iTaskHandler(void)
 }
 INIT_APP_EXPORT(WDT_iTaskHandler);
 
-
 static void WDT_vTaskHandler_Entry(void* parameter)
 {
     while (1)
     {
         WDT_RefreshCounter();
-        rt_thread_mdelay(30);
+        rt_thread_mdelay(10);
     }
 }

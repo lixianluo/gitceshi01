@@ -176,6 +176,8 @@ static void FLASH_vReadData(void)
 		(void)memcpy(&temp_value, &ucReadData[FLASH_ADD_TIME_MIN], 4u);
 		APP_Display_read_min_time(temp_value);
 
+		/*IOT ±º‰∂¡»°*/
+		Main_IotTime_Read();
 		/*************************************************************************************************
 		 * *********** Application code end here !!!
 		 * **********************************************************************************************/

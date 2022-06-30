@@ -6,19 +6,21 @@
  * Specifies the ADC channels according to the application.
  * NOTE!!! Sequence A and sequence B CANNOT contain the same channel.
  */
+#define	ADC_CH_REMAP				1
+
 #define ADC1_REMAP_CH               (ADC1_CH0 | ADC1_CH1)
-#define ADC2_REMAP_CH               (ADC2_CH0 | ADC2_CH1 | ADC2_CH2)
+#define ADC2_REMAP_CH               (ADC2_CH0 | ADC2_CH1 )
 
 #define ADC2_SA_CHANNEL             (ADC2_REMAP_CH)
 #define ADC1_SA_CHANNEL             (ADC1_REMAP_CH)
 #define ADC1_SA_CHANNEL_COUNT       (2u)
-#define ADC2_SA_CHANNEL_COUNT       (3u)
+#define ADC2_SA_CHANNEL_COUNT       (2u)
 
 #define ADC1_CHANNEL                (ADC1_SA_CHANNEL)//| ADC1_SB_CHANNEL)
 #define ADC2_CHANNEL                (ADC2_SA_CHANNEL)//| ADC2_SB_CHANNEL)
  /* ADC1 channel sampling time.      ADC1_CH0  ADC1_CH1 */
 #define ADC1_SA_CHANNEL_SAMPLE_TIME {60,60}
-#define ADC2_SA_CHANNEL_SAMPLE_TIME {60,60,60}
+#define ADC2_SA_CHANNEL_SAMPLE_TIME {60,60}
 
 
 /* DMA definition for ADC1. */
@@ -36,7 +38,7 @@
 
 #define ADC2_SA_DMA_CH              (DmaCh1)
 #define ADC2_SA_DMA_TRGSRC          (EVT_ADC2_EOCA)
-#define ADC2_SA_DMA_BLOCK_SIZE		(3u)
+#define ADC2_SA_DMA_BLOCK_SIZE		(2u)
 #define ADC2_SA_DMA_TRANS_COUNT		(0u)
 
 
@@ -48,8 +50,7 @@ enum {
 	ADC_IDX_0 = 0,		//吸风电机电流
 	ADC_IDX_1,			//盘刷电机电流
 	ADC_IDX_2,			//电源电压
-	ADC_IDX_3,			//关机采样
-	ADC_IDX_4,			//温度
+	ADC_IDX_3,			//温度
 	ADC_IDX_NUM
 };
 

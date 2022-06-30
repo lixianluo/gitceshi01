@@ -178,7 +178,7 @@ CGRAM可以存储8个自定义字符，他们在存储器中的首地址分别为:0x40,0x48,0x50,0x58,0x6
 static const uint8_t User1[] = { 0x00,0x00,0x00,0x01,0x05,0x15,0x15,0x15 };//自定义WIFI字符
 static const uint8_t User2[] = { 0x01,0x05,0x15,0x15,0x15,0x15,0x15,0x15 };//自定义WIFI字符
 
-void IIC_LCE1602_WIFI_Init(void)
+void IIC_LCD1602_WIFI_Init(void)
 {
 	IIC_LCD1602_Write_Cmd(0x40); //设定 CGRAM 地址
 	for (uint8_t i = 0; i < 8; i++)
@@ -194,7 +194,7 @@ void IIC_LCE1602_WIFI_Init(void)
 /*
 显示WIFI的图标
 */
-void IIC_LCE1602_WIFI_Display(void)
+void IIC_LCD1602_WIFI_Display(void)
 {
 	IIC_LCD1602_Write_Cmd(0x8E); //设定屏幕上的显示位置
 	IIC_LCD1602_Write_Data(0x00); //从 CGRAM 里取出自定义图形显示
@@ -202,7 +202,7 @@ void IIC_LCE1602_WIFI_Display(void)
 	IIC_LCD1602_Write_Data(0x01); //从 CGRAM 里取出自定义图形显示
 }
 
-void IIC_LCE1602_WIFI_Not_Display(void)
+void IIC_LCD1602_WIFI_Not_Display(void)
 {
 	IIC_LCD1602_Write_Cmd(0x8E); //设定屏幕上的显示位置
 	IIC_LCD1602_Write_Data(0x20); //写入空

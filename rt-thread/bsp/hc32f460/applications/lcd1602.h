@@ -16,9 +16,9 @@ extern void IIC_LCD1602_Write_String(uint8_t ucAddr, uint8_t ucDatalen, uint8_t*
 extern void IIC_LCD1602_Write_Number(uint8_t ucAddr, uint32_t num);
 extern void IIC_LCD1602_Read_String(uint8_t ucAddr, uint8_t ucDatalen, uint8_t* pucBuf);
 extern void IIC_LCD1602_Write_Number2(uint8_t ucAddr, uint8_t num);
-extern void IIC_LCE1602_WIFI_Init(void);
-extern void IIC_LCE1602_WIFI_Display(void);
-extern void IIC_LCE1602_WIFI_Not_Display(void);
+extern void IIC_LCD1602_WIFI_Init(void);
+extern void IIC_LCD1602_WIFI_Display(void);
+extern void IIC_LCD1602_WIFI_Not_Display(void);
 #endif // LCD_1602_H_
 
 /*

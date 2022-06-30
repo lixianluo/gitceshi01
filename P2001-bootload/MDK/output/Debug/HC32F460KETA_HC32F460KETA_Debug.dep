@@ -1,0 +1,652 @@
+Dependencies for Project 'HC32F460KETA', Target 'HC32F460KETA_Debug': (DO NOT MODIFY !)
+F (.\startup_hc32f460keta.s)(0x5FD9B04C)(--cpu Cortex-M4.fp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include--pd "__UVISION_VERSION SETA 524" --pd "_RTE_ SETA 1"-o .\output\debug\startup_hc32f460keta.o --depend .\output\debug\startup_hc32f460keta.d)
+F (..\common\system_hc32f460keta.c)(0x60892380)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\system_hc32f460keta.o --omf_browse .\output\debug\system_hc32f460keta.crf --depend .\output\debug\system_hc32f460keta.d)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+F (..\source\main.c)(0x609528F2)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\main.o --omf_browse .\output\debug\main.crf --depend .\output\debug\main.d)
+I (..\common\hc32_ddl.h)(0x5CEBB8D2)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_can.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_clk.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_dmac.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_efm.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_gpio.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_icg.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_interrupts.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_pwc.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_timer0.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_timer4_cnt.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_timera.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_usart.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_utility.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_wdt.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_sram.h)(0x6035BC40)
+I (..\source\task.h)(0x6086A4E8)
+I (..\source\Timer/timer.h)(0x608A982D)
+I (..\source\sw_timer.h)(0x608BA14D)
+I (..\source\GPIO/gpio.h)(0x6088ACCD)
+I (..\source\UART/uart.h)(0x60939DD1)
+I (..\source\debug.h)(0x6094DD0E)
+I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
+I (..\source\wdt.h)(0x608962EE)
+I (..\source\CAN/can.h)(0x60937C98)
+F (..\source\task.c)(0x6093AD80)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\task.o --omf_browse .\output\debug\task.crf --depend .\output\debug\task.d)
+I (..\source\task.h)(0x6086A4E8)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\driver\inc\hc32f46x_utility.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\source\timestamp.h)(0x608925F9)
+I (..\source\defines.h)(0x60934997)
+I (..\source\UART\uart.h)(0x60939DD1)
+I (..\driver\inc\hc32f46x_usart.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_gpio.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_dmac.h)(0x6035BC40)
+I (..\source\GPIO\gpio.h)(0x6088ACCD)
+I (..\source\AlgorithmBoard/AlgorithmBoard.h)(0x608B640E)
+I (..\source\CAN/can.h)(0x60937C98)
+I (..\driver\inc\hc32f46x_can.h)(0x6035BC40)
+I (..\source\Encoder/encoder.h)(0x60934CBA)
+I (..\source\Timer\timer.h)(0x608A982D)
+I (..\source\IMU/imu.h)(0x608BAC5D)
+I (..\source\sw_timer.h)(0x608BA14D)
+I (..\source\Board2Board/Board2Board.h)(0x60934CBD)
+I (..\source\Ultrasonic/ultrasonic.h)(0x6093A2C9)
+F (..\source\Timer\timer.c)(0x609529EC)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\timer.o --omf_browse .\output\debug\timer.crf --depend .\output\debug\timer.d)
+I (..\source\Timer\timer.h)(0x608A982D)
+I (..\driver\inc\hc32f46x_timer0.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_timer4_cnt.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_timera.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_interrupts.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_pwc.h)(0x6035BC40)
+I (..\source\sw_timer.h)(0x608BA14D)
+I (..\source\GPIO\gpio.h)(0x6088ACCD)
+I (..\driver\inc\hc32f46x_gpio.h)(0x6035BC40)
+I (..\source\timestamp.h)(0x608925F9)
+I (..\source\defines.h)(0x60934997)
+I (..\source\UART\uart.h)(0x60939DD1)
+I (..\driver\inc\hc32f46x_usart.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_dmac.h)(0x6035BC40)
+I (..\source\Encoder\encoder.h)(0x60934CBA)
+F (..\source\sw_timer.c)(0x608BA190)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\sw_timer.o --omf_browse .\output\debug\sw_timer.crf --depend .\output\debug\sw_timer.d)
+I (..\source\sw_timer.h)(0x608BA14D)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+F (..\source\GPIO\gpio.c)(0x60934C9E)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\gpio.o --omf_browse .\output\debug\gpio.crf --depend .\output\debug\gpio.d)
+I (..\source\GPIO\gpio.h)(0x6088ACCD)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\driver\inc\hc32f46x_gpio.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+F (..\source\UART\uart.c)(0x6093BD53)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\uart.o --omf_browse .\output\debug\uart.crf --depend .\output\debug\uart.d)
+I (..\source\UART\uart.h)(0x60939DD1)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\driver\inc\hc32f46x_usart.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_gpio.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_dmac.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_pwc.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_timer0.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_interrupts.h)(0x6035BC40)
+I (..\source\GPIO\gpio.h)(0x6088ACCD)
+I (..\source\timestamp.h)(0x608925F9)
+I (..\source\defines.h)(0x60934997)
+I (..\source\AlgorithmBoard/AlgorithmBoard.h)(0x608B640E)
+I (..\source\IMU\imu.h)(0x608BAC5D)
+I (..\source\Ultrasonic\ultrasonic.h)(0x6093A2C9)
+F (..\source\timestamp.c)(0x6093A2AB)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\timestamp.o --omf_browse .\output\debug\timestamp.crf --depend .\output\debug\timestamp.d)
+I (..\source\timestamp.h)(0x608925F9)
+I (..\source\defines.h)(0x60934997)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\source\UART\uart.h)(0x60939DD1)
+I (..\driver\inc\hc32f46x_usart.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_gpio.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_dmac.h)(0x6035BC40)
+I (..\source\GPIO\gpio.h)(0x6088ACCD)
+I (..\source\sw_timer.h)(0x608BA14D)
+I (..\driver\inc\hc32f46x_timer0.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_timer4_cnt.h)(0x6035BC40)
+F (..\source\debug.c)(0x60892FD9)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\debug.o --omf_browse .\output\debug\debug.crf --depend .\output\debug\debug.d)
+I (..\source\debug.h)(0x6094DD0E)
+I (..\source\UART\uart.h)(0x60939DD1)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\driver\inc\hc32f46x_usart.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_gpio.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_dmac.h)(0x6035BC40)
+I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
+F (..\source\AlgorithmBoard\AlgorithmBoard.c)(0x608B6F43)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\algorithmboard.o --omf_browse .\output\debug\algorithmboard.crf --depend .\output\debug\algorithmboard.d)
+I (..\source\AlgorithmBoard\AlgorithmBoard.h)(0x608B640E)
+I (..\source\defines.h)(0x60934997)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\source\UART\uart.h)(0x60939DD1)
+I (..\driver\inc\hc32f46x_usart.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_gpio.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_dmac.h)(0x6035BC40)
+I (..\source\GPIO\gpio.h)(0x6088ACCD)
+I (..\source\sw_timer.h)(0x608BA14D)
+I (..\source\timestamp.h)(0x608925F9)
+I (..\driver\inc\hc32f46x_timer0.h)(0x6035BC40)
+F (..\source\wdt.c)(0x608962DE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\wdt.o --omf_browse .\output\debug\wdt.crf --depend .\output\debug\wdt.d)
+I (..\source\wdt.h)(0x608962EE)
+I (..\driver\inc\hc32f46x_wdt.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+F (..\source\CAN\can.c)(0x60949A9B)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\can.o --omf_browse .\output\debug\can.crf --depend .\output\debug\can.d)
+I (..\source\CAN\can.h)(0x60937C98)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\driver\inc\hc32f46x_can.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\source\sw_timer.h)(0x608BA14D)
+I (..\driver\inc\hc32f46x_pwc.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_interrupts.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_gpio.h)(0x6035BC40)
+I (..\source\Board2Board\Board2Board.h)(0x60934CBD)
+I (..\source\defines.h)(0x60934997)
+F (..\source\Encoder\encoder.c)(0x60934CC0)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\encoder.o --omf_browse .\output\debug\encoder.crf --depend .\output\debug\encoder.d)
+I (..\source\Encoder\encoder.h)(0x60934CBA)
+I (..\source\Timer\timer.h)(0x608A982D)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\driver\inc\hc32f46x_timera.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+F (..\source\IMU\imu.c)(0x6095FB1C)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\imu.o --omf_browse .\output\debug\imu.crf --depend .\output\debug\imu.d)
+I (..\source\IMU\imu.h)(0x608BAC5D)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\source\UART\uart.h)(0x60939DD1)
+I (..\driver\inc\hc32f46x_usart.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_gpio.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_dmac.h)(0x6035BC40)
+I (..\source\sw_timer.h)(0x608BA14D)
+I (..\source\Error\error.h)(0x609358E1)
+I (..\source\defines.h)(0x60934997)
+I (..\source\timestamp.h)(0x608925F9)
+I (..\source\GPIO\gpio.h)(0x6088ACCD)
+I (..\driver\inc\hc32f46x_timer0.h)(0x6035BC40)
+F (..\source\Board2Board\Board2Board.c)(0x60938767)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\board2board.o --omf_browse .\output\debug\board2board.crf --depend .\output\debug\board2board.d)
+I (..\source\Board2Board\Board2Board.h)(0x60934CBD)
+I (..\source\defines.h)(0x60934997)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\source\CAN\can.h)(0x60937C98)
+I (..\driver\inc\hc32f46x_can.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\source\sw_timer.h)(0x608BA14D)
+I (..\source\Pedal\acc_pedal.h)(0x60934CB8)
+I (..\source\Encoder\encoder.h)(0x60934CBA)
+I (..\source\Timer\timer.h)(0x608A982D)
+I (..\source\ServoMotor\servo_motor.h)(0x60934CB3)
+I (..\source\DriveControl\DriveControl.h)(0x609358E4)
+I (..\source\Mode\mode.h)(0x609358FE)
+I (..\source\Error\error.h)(0x609358E1)
+I (..\source\Battery\battery.h)(0x609358DD)
+I (..\source\version.h)(0x6094DCAF)
+F (..\source\Battery\battery.c)(0x5FACD71C)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\battery.o --omf_browse .\output\debug\battery.crf --depend .\output\debug\battery.d)
+I (..\source\Battery\battery.h)(0x609358DD)
+I (..\source\defines.h)(0x60934997)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+F (..\source\DriveControl\DriveControl.c)(0x60345C0A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\drivecontrol.o --omf_browse .\output\debug\drivecontrol.crf --depend .\output\debug\drivecontrol.d)
+I (..\source\DriveControl\DriveControl.h)(0x609358E4)
+I (..\source\defines.h)(0x60934997)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+F (..\source\Mode\mode.c)(0x60934B43)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\mode.o --omf_browse .\output\debug\mode.crf --depend .\output\debug\mode.d)
+I (..\source\Mode\mode.h)(0x609358FE)
+I (..\source\defines.h)(0x60934997)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\source\DriveControl\DriveControl.h)(0x609358E4)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (..\source\sw_timer.h)(0x608BA14D)
+I (..\source\ServoMotor\servo_motor.h)(0x60934CB3)
+I (..\source\Pedal\acc_pedal.h)(0x60934CB8)
+I (..\source\Error\error.h)(0x609358E1)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (..\source\Battery\battery.h)(0x609358DD)
+I (..\source\debug.h)(0x6094DD0E)
+I (..\source\UART\uart.h)(0x60939DD1)
+I (..\driver\inc\hc32f46x_usart.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_gpio.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_dmac.h)(0x6035BC40)
+I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
+I (..\source\Board2Board\Board2Board.h)(0x60934CBD)
+I (..\source\CAN\can.h)(0x60937C98)
+I (..\driver\inc\hc32f46x_can.h)(0x6035BC40)
+I (..\source\version.h)(0x6094DCAF)
+F (..\source\ServoMotor\servo_motor.c)(0x60952AE8)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\servo_motor.o --omf_browse .\output\debug\servo_motor.crf --depend .\output\debug\servo_motor.d)
+I (..\source\ServoMotor\servo_motor.h)(0x60934CB3)
+I (..\source\defines.h)(0x60934997)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (..\source\debug.h)(0x6094DD0E)
+I (..\source\UART\uart.h)(0x60939DD1)
+I (..\driver\inc\hc32f46x_usart.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_gpio.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_dmac.h)(0x6035BC40)
+I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
+I (..\source\timestamp.h)(0x608925F9)
+I (..\source\GPIO\gpio.h)(0x6088ACCD)
+F (..\source\Error\error.c)(0x609358F7)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\error.o --omf_browse .\output\debug\error.crf --depend .\output\debug\error.d)
+I (..\source\Error\error.h)(0x609358E1)
+I (..\source\defines.h)(0x60934997)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (..\source\Ultrasonic\ultrasonic.h)(0x6093A2C9)
+I (..\source\GPIO\gpio.h)(0x6088ACCD)
+I (..\driver\inc\hc32f46x_gpio.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\source\UART\uart.h)(0x60939DD1)
+I (..\driver\inc\hc32f46x_usart.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_dmac.h)(0x6035BC40)
+I (..\source\Mode\mode.h)(0x609358FE)
+F (..\source\version.c)(0x60780434)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\version.o --omf_browse .\output\debug\version.crf --depend .\output\debug\version.d)
+I (..\source\version.h)(0x6094DCAF)
+I (..\source\defines.h)(0x60934997)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+F (..\source\Pedal\acc_pedal.c)(0x5FE48604)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\acc_pedal.o --omf_browse .\output\debug\acc_pedal.crf --depend .\output\debug\acc_pedal.d)
+I (..\source\Pedal\acc_pedal.h)(0x60934CB8)
+I (..\source\defines.h)(0x60934997)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\source\ServoMotor\servo_motor.h)(0x60934CB3)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+F (..\source\Ultrasonic\ultrasonic.c)(0x6094DCF2)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\ultrasonic.o --omf_browse .\output\debug\ultrasonic.crf --depend .\output\debug\ultrasonic.d)
+I (..\source\Ultrasonic\ultrasonic.h)(0x6093A2C9)
+I (..\source\defines.h)(0x60934997)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (..\source\GPIO\gpio.h)(0x6088ACCD)
+I (..\driver\inc\hc32f46x_gpio.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\source\UART\uart.h)(0x60939DD1)
+I (..\driver\inc\hc32f46x_usart.h)(0x6035BC40)
+I (..\driver\inc\hc32f46x_dmac.h)(0x6035BC40)
+I (..\source\sw_timer.h)(0x608BA14D)
+I (..\source\Error\error.h)(0x609358E1)
+I (..\source\Mode\mode.h)(0x609358FE)
+I (..\source\debug.h)(0x6094DD0E)
+I (D:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x588B8344)
+I (..\driver\inc\hc32f46x_timer0.h)(0x6035BC40)
+F (..\driver\src\hc32f46x_sram.c)(0x6035BC40)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\hc32f46x_sram.o --omf_browse .\output\debug\hc32f46x_sram.crf --depend .\output\debug\hc32f46x_sram.d)
+I (..\driver\inc\hc32f46x_sram.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_utility.h)(0x6035BC40)
+F (..\driver\src\hc32f46x_clk.c)(0x6035BC40)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\hc32f46x_clk.o --omf_browse .\output\debug\hc32f46x_clk.crf --depend .\output\debug\hc32f46x_clk.d)
+I (..\driver\inc\hc32f46x_clk.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_utility.h)(0x6035BC40)
+F (..\driver\src\hc32f46x_pwc.c)(0x6035BC40)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\hc32f46x_pwc.o --omf_browse .\output\debug\hc32f46x_pwc.crf --depend .\output\debug\hc32f46x_pwc.d)
+I (..\driver\inc\hc32f46x_pwc.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_utility.h)(0x6035BC40)
+F (..\driver\src\hc32f46x_utility.c)(0x6086A1C7)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\hc32f46x_utility.o --omf_browse .\output\debug\hc32f46x_utility.crf --depend .\output\debug\hc32f46x_utility.d)
+I (..\driver\inc\hc32f46x_utility.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+F (..\driver\src\hc32f46x_interrupts.c)(0x6035BC40)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\hc32f46x_interrupts.o --omf_browse .\output\debug\hc32f46x_interrupts.crf --depend .\output\debug\hc32f46x_interrupts.d)
+I (..\driver\inc\hc32f46x_interrupts.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_utility.h)(0x6035BC40)
+F (..\driver\src\hc32f46x_timer0.c)(0x6094FFC9)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\hc32f46x_timer0.o --omf_browse .\output\debug\hc32f46x_timer0.crf --depend .\output\debug\hc32f46x_timer0.d)
+I (..\driver\inc\hc32f46x_timer0.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_utility.h)(0x6035BC40)
+F (..\driver\src\hc32f46x_gpio.c)(0x6035BC40)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\hc32f46x_gpio.o --omf_browse .\output\debug\hc32f46x_gpio.crf --depend .\output\debug\hc32f46x_gpio.d)
+I (..\driver\inc\hc32f46x_gpio.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_utility.h)(0x6035BC40)
+F (..\driver\src\hc32f46x_efm.c)(0x6035BC40)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\hc32f46x_efm.o --omf_browse .\output\debug\hc32f46x_efm.crf --depend .\output\debug\hc32f46x_efm.d)
+I (..\driver\inc\hc32f46x_efm.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_utility.h)(0x6035BC40)
+F (..\driver\src\hc32f46x_dmac.c)(0x6035BC40)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\hc32f46x_dmac.o --omf_browse .\output\debug\hc32f46x_dmac.crf --depend .\output\debug\hc32f46x_dmac.d)
+I (..\driver\inc\hc32f46x_dmac.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_utility.h)(0x6035BC40)
+F (..\driver\src\hc32f46x_usart.c)(0x6035BC40)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\hc32f46x_usart.o --omf_browse .\output\debug\hc32f46x_usart.crf --depend .\output\debug\hc32f46x_usart.d)
+I (..\driver\inc\hc32f46x_usart.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_utility.h)(0x6035BC40)
+F (..\driver\src\hc32f46x_timer4_cnt.c)(0x6035BC40)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\hc32f46x_timer4_cnt.o --omf_browse .\output\debug\hc32f46x_timer4_cnt.crf --depend .\output\debug\hc32f46x_timer4_cnt.d)
+I (..\driver\inc\hc32f46x_timer4_cnt.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_utility.h)(0x6035BC40)
+F (..\driver\src\hc32f46x_wdt.c)(0x6035BC40)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\hc32f46x_wdt.o --omf_browse .\output\debug\hc32f46x_wdt.crf --depend .\output\debug\hc32f46x_wdt.d)
+I (..\driver\inc\hc32f46x_wdt.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_utility.h)(0x6035BC40)
+F (..\driver\src\hc32f46x_can.c)(0x6035BC40)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\hc32f46x_can.o --omf_browse .\output\debug\hc32f46x_can.crf --depend .\output\debug\hc32f46x_can.d)
+I (..\driver\inc\hc32f46x_can.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_utility.h)(0x6035BC40)
+F (..\driver\src\hc32f46x_timera.c)(0x6035BC40)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I ..\common -I ..\source -I ..\driver\src -I ..\driver\inc -I ..\source\Timer -I ..\source\GPIO -I ..\source\DMA -I ..\source\UART -I ..\source\AlgorithmBoard -I ..\source\Encoder -I ..\source\IMU -I ..\source\Battery -I ..\source\Board2Board -I ..\source\CAN -I ..\source\DriveControl -I ..\source\Error -I ..\source\Mode -I ..\source\Pedal -I ..\source\ServoMotor -I ..\source\Ultrasonic --diag_suppress=186-I.\RTE\_HC32F460KETA_Debug-ID:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-ID:\Keil_v5\ARM\PACK\HDSC\HC32F46x\1.0.6\Device\Include-D__UVISION_VERSION="524" -D_RTE_ -D__DEBUG -DHC32F46x -DUSE_DEVICE_DRIVER_LIB -D__TARGET_FPU_VFP -DARM_MATH_CM4-o .\output\debug\hc32f46x_timera.o --omf_browse .\output\debug\hc32f46x_timera.crf --depend .\output\debug\hc32f46x_timera.d)
+I (..\driver\inc\hc32f46x_timera.h)(0x6035BC40)
+I (..\common\hc32_common.h)(0x5FD9B04C)
+I (D:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\string.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x588B8344)
+I (D:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x588B8344)
+I (..\common\hc32f460keta.h)(0x60939A10)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\core_cm4.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_compiler.h)(0x5898498A)
+I (D:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include\cmsis_armcc.h)(0x5898498A)
+I (..\common\system_hc32f460keta.h)(0x5FD9B04C)
+I (..\source\ddl_config.h)(0x608A9544)
+I (..\driver\inc\hc32f46x_utility.h)(0x6035BC40)

@@ -1,0 +1,31 @@
+ymodem_ota.pbi: E:\p2001_project\hdsc-bootload-P2001\source\can_iap.h \
+  E:\p2001_project\hdsc-bootload-P2001\source\flash.h \
+  E:\p2001_project\hdsc-bootload-P2001\EWARM\..\source\GPIO\gpio.h \
+  E:\p2001_project\hdsc-bootload-P2001\source\AlgorithmBoard\AlgorithmBoard.h \
+  E:\p2001_project\hdsc-bootload-P2001\source\sw_timer.h \
+  E:\p2001_project\hdsc-bootload-P2001\EWARM\..\driver\inc\hc32f46x_dmac.h \
+  E:\p2001_project\hdsc-bootload-P2001\EWARM\..\driver\inc\hc32f46x_gpio.h \
+  E:\p2001_project\hdsc-bootload-P2001\source\ddl_config.h \
+  E:\p2001_project\hdsc-bootload-P2001\EWARM\..\common\system_hc32f460keta.h \
+  D:\IAR_8.40.2\arm\CMSIS\Core\Include\mpu_armv7.h \
+  D:\IAR_8.40.2\arm\inc\c\iccarm_builtin.h \
+  D:\IAR_8.40.2\arm\CMSIS\Core\Include\cmsis_iccarm.h \
+  D:\IAR_8.40.2\arm\CMSIS\Core\Include\cmsis_compiler.h \
+  D:\IAR_8.40.2\arm\CMSIS\Core\Include\cmsis_version.h \
+  D:\IAR_8.40.2\arm\CMSIS\Core\Include\core_cm4.h \
+  E:\p2001_project\hdsc-bootload-P2001\EWARM\..\common\hc32f460keta.h \
+  D:\IAR_8.40.2\arm\inc\c\ycheck.h D:\IAR_8.40.2\arm\inc\c\stddef.h \
+  D:\IAR_8.40.2\arm\inc\c\DLib_Product_string.h \
+  D:\IAR_8.40.2\arm\inc\c\string.h \
+  E:\p2001_project\hdsc-bootload-P2001\EWARM\..\common\hc32_common.h \
+  E:\p2001_project\hdsc-bootload-P2001\EWARM\..\driver\inc\hc32f46x_usart.h \
+  E:\p2001_project\hdsc-bootload-P2001\EWARM\..\source\UART\uart.h \
+  D:\IAR_8.40.2\arm\inc\c\DLib_Product_stdlib.h \
+  D:\IAR_8.40.2\arm\inc\c\stdlib.h D:\IAR_8.40.2\arm\inc\c\stdbool.h \
+  D:\IAR_8.40.2\arm\inc\c\ysizet.h D:\IAR_8.40.2\arm\inc\c\stdio.h \
+  D:\IAR_8.40.2\arm\inc\c\DLib_Product.h \
+  D:\IAR_8.40.2\arm\inc\c\DLib_Defaults.h \
+  D:\IAR_8.40.2\arm\inc\c\yvals.h D:\IAR_8.40.2\arm\inc\c\stdint.h \
+  E:\p2001_project\hdsc-bootload-P2001\source\defines.h \
+  E:\p2001_project\hdsc-bootload-P2001\source\ymodem_ota.h \
+  E:\p2001_project\hdsc-bootload-P2001\source\ymodem_ota.c

@@ -13,7 +13,9 @@ typedef struct {
 }TspeedInfo;
 
 /*¶ÔÍâº¯Êý----------------------------------------------------*/
+TspeedInfo* ptApp_Motor_Branch(void);
 
+TspeedInfo* ptApp_Motor_Suction(void);
 /*-------------------------------------------------------------*/
 
 

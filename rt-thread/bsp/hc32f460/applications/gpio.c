@@ -19,15 +19,17 @@ void GPIO_vInit(void)
     stcPortInit.enExInt = Disable;
     stcPortInit.enPullUp = Enable;
 
-    PORT_Init(LED1_PORT, LED1_PIN, &stcPortInit);    //LED初始化
-    PORT_Init(LED2_PORT, LED2_PIN, &stcPortInit);
+    PORT_Init(BLUE_PORT, BLUE_PIN, &stcPortInit);    //LED初始化
+    PORT_Init(RED_PORT, RED_PIN, &stcPortInit);         
+    
 
-  
     PORT_Init(POWEN_PORT, POWEN_PIN, &stcPortInit);     //电源保持引脚配置
 
     PORT_Init(VALVE_PORT, VALVE_PIN, &stcPortInit);     //电磁阀引脚配置
 
-    PORT_Init(PWM_EN_PORT, PWM_EN_PIN, &stcPortInit);   //大功率使能口引脚配置
+    PORT_Init(BRUSH_EN_PORT, BRUSH_EN_PIN, &stcPortInit);   //盘刷电机使能口引脚配置
+    
+    PORT_Init(SUCTION_EN_PORT, SUCTION_EN_PIN, &stcPortInit);   //吸风电机使能口引脚配置
 
 
 
@@ -38,11 +40,11 @@ void GPIO_vInit(void)
     stcPortInit.enExInt = Disable;
     stcPortInit.enPullUp = Disable;
 
-    PORT_Init(BRUSH_START_PORT, BRUSH_START_PIN, &stcPortInit);         //盘刷启动引脚配置
+    PORT_Init(SWITCH_B3_PORT, SWITCH_B3_PIN, &stcPortInit);             //旋转开关B3引脚配置
 
-    PORT_Init(SUCTION_START_PORT, SUCTION_START_PIN, &stcPortInit);     //吸风启动引脚配置
+    PORT_Init(SWITCH_A2_PORT, SWITCH_A2_PIN, &stcPortInit);             //旋转开关A2引脚配置
 
-    PORT_Init(ALL_START_PORT, ALL_START_PIN, &stcPortInit);             //盘刷 + 吸风启动引脚配置
+    PORT_Init(SWITCH_A1_PORT, SWITCH_A1_PIN, &stcPortInit);             //旋转开关A1引脚配置
 
     PORT_Init(HAND_PORT, HAND_PIN, &stcPortInit);                       //把手开关引脚配置
 

@@ -23,7 +23,7 @@ static void ADC_vValueHanler0(uint32_t ulAdValue);
 static void ADC_vValueHanler1(uint32_t ulAdValue);
 static void ADC_vValueHanler2(uint32_t ulAdValue);
 static void ADC_vValueHanler3(uint32_t ulAdValue);
-static void ADC_vValueHanler4(uint32_t ulAdValue);
+
 
 
 /*1分钟电源电压滤波*/
@@ -111,9 +111,9 @@ static void AdcChannelConfig(void)
     ADC_ChannelRemap(M4_ADC1, ADC1_CH0, ADC1_IN14);
     ADC_ChannelRemap(M4_ADC1, ADC1_CH1, ADC1_IN15);
     
-    ADC_ChannelRemap(M4_ADC2, ADC2_CH0, ADC12_IN4);
-    ADC_ChannelRemap(M4_ADC2, ADC2_CH1, ADC12_IN6);
-    ADC_ChannelRemap(M4_ADC2, ADC2_CH2, ADC12_IN9);
+    ADC_ChannelRemap(M4_ADC2, ADC2_CH0, ADC12_IN6);
+    ADC_ChannelRemap(M4_ADC2, ADC2_CH1, ADC12_IN9);
+    
 
  
     /**************************** Add ADC1 channels ****************************/
@@ -379,16 +379,18 @@ static void AdcSetPinMode(uint8_t u8AdcPin, en_pin_mode_t enMode)
     }
 }
 
+/*电流公式计算 AD = (0.13453 + 电流 *内阻 * 12/12.51)*5.31*1241.21 */
 static void ADC_vValueHanler0(uint32_t ulAdValue)
 {
 	float fAdcurrent = 0;
-	fAdcurrent = ((float)(ulAdValue - 886.663701f)) / 31.6106517f;   //886.663701和31.6106517都是硬件上面计算得来
+	fAdcurrent = ((float)(ulAdValue - 886.663701f)) / (6327.192096f * 0.0028f);   //886.663701和都是硬件上面计算得来 0.0028是内阻
 	ADC_tInfo.fConvertValue[ADC_IDX_0] = fAdcurrent;
-
 }
 static void ADC_vValueHanler1(uint32_t ulAdValue)
 {
-    
+    float fAdcurrent = 0;
+    fAdcurrent = ((float)(ulAdValue - 886.663701f)) / (6327.192096f * 0.0028f);   //886.663701和都是硬件上面计算得来 0.0028是内阻
+    ADC_tInfo.fConvertValue[ADC_IDX_1] = fAdcurrent;
 }
 static void ADC_vValueHanler2(uint32_t ulAdValue)
 {
@@ -399,12 +401,9 @@ static void ADC_vValueHanler2(uint32_t ulAdValue)
 }
 static void ADC_vValueHanler3(uint32_t ulAdValue)
 {
-    
+    //硬件没接，预留
 }
-static void ADC_vValueHanler4(uint32_t ulAdValue)
-{
-   
-}
+
 
 
 
@@ -484,7 +483,7 @@ static void ADC_vCalculateADValue(void)
     ADC_vValueHanler1(ADC_tInfo.ulADValue[ADC_IDX_1]);
     ADC_vValueHanler2(ADC_tInfo.ulADValue[ADC_IDX_2]);
     ADC_vValueHanler3(ADC_tInfo.ulADValue[ADC_IDX_3]);
-    ADC_vValueHanler4(ADC_tInfo.ulADValue[ADC_IDX_4]);
+
 
 }
 
@@ -493,7 +492,7 @@ static void supply_voltage_timeout(void* parameter)
     
     if (supply_voltage_flag == 1)
     {
-        ADC_tInfo.supply_voltage = (ADC_tInfo.supply_voltage == 0) ? ADC_tInfo.fConvertValue[ADC_IDX_2] : ADC_tInfo.supply_voltage;//第一次写入
+        ADC_tInfo.supply_voltage = (ADC_tInfo.supply_voltage < 10) ? ADC_tInfo.fConvertValue[ADC_IDX_2] : ADC_tInfo.supply_voltage;//第一次写入和关机时候AD为2.5v
 
         supply_voltage_buff += ADC_tInfo.fConvertValue[ADC_IDX_2];
         supply_voltage_count++;

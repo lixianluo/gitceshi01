@@ -1,0 +1,13 @@
+"D:\IAR_8.40.2\arm\bin\armproc.dll" 
+
+"D:\IAR_8.40.2\arm\bin\armstlink2.dll" 
+
+"E:\p2001_project\hdsc-bootload-P2001\EWARM\output\debug\Exe\hc32f460keta.out" 
+
+--plugin="D:\IAR_8.40.2\arm\bin\armbat.dll" 
+
+--flash_loader="E:\p2001_project\hdsc-bootload-P2001\EWARM\config\flashloader\HC32F46x.board" 
+
+
+
+

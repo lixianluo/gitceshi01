@@ -59,7 +59,7 @@ extern "C"
  **
  ** \note DDL_PRINT_ENABLE must be turned on(DDL_ON) if using printf function.
  ******************************************************************************/
-#define DDL_ICG_ENABLE                              (DDL_ON)
+#define DDL_ICG_ENABLE                              (DDL_OFF)
 #define DDL_UTILITY_ENABLE                          (DDL_ON)
 #define DDL_PRINT_ENABLE                            (DDL_ON)
 

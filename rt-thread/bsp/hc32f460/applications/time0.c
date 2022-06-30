@@ -10,7 +10,7 @@ void TIMER0_vInit(void)
     MEM_ZERO_STRUCT(StcTimer0TrigInit);
 
     /**Timer Unit 1 A, Timer Unit 1 B*/
-   //PWC_Fcg2PeriphClockCmd(PWC_FCG2_PERIPH_TIM01, Enable);          //打开TIM01的时钟 TIM01A对应串口1   TIM01B对应串口2
+   PWC_Fcg2PeriphClockCmd(PWC_FCG2_PERIPH_TIM01, Enable);          //打开TIM01的时钟 TIM01A对应串口1   TIM01B对应串口2
    /**Timer Unit 2 A, Timer Unit 2 B*/                           //打开TIM02的时钟 TIM02A对应串口3   TIM02B对应串口4
     PWC_Fcg2PeriphClockCmd(PWC_FCG2_PERIPH_TIM02, Enable);
 
@@ -40,24 +40,24 @@ void TIMER0_vInit(void)
     /**Timer01 B set as uart2 timeout clock source--------------------------------------------------*/
 
     /* Clear CNTAR register for channel A */
-  /*  TIMER0_WriteCntReg(M4_TMR01, Tim0_ChannelB, 0u);*/
+    TIMER0_WriteCntReg(M4_TMR01, Tim0_ChannelB, 0u);
 
     /* Config register for channel A */
-    /*stcTimerCfg.Tim0_CounterMode = Tim0_Async;
+    stcTimerCfg.Tim0_CounterMode = Tim0_Async;
     stcTimerCfg.Tim0_AsyncClockSource = Tim0_LRC;
     stcTimerCfg.Tim0_ClockDivision = Tim0_ClkDiv0;
     stcTimerCfg.Tim0_CmpValue = 8u;
-    TIMER0_BaseInit(M4_TMR01, Tim0_ChannelB, &stcTimerCfg);*/
+    TIMER0_BaseInit(M4_TMR01, Tim0_ChannelB, &stcTimerCfg);
 
     /* Clear compare flag */
    /* TIMER0_ClearFlag(M4_TMR01, Tim0_ChannelB);*/
 
     /* Config timer0 hardware trigger */
-   /* StcTimer0TrigInit.Tim0_InTrigEnable = false;
+   StcTimer0TrigInit.Tim0_InTrigEnable = false;
     StcTimer0TrigInit.Tim0_InTrigClear = true;
     StcTimer0TrigInit.Tim0_InTrigStart = true;
     StcTimer0TrigInit.Tim0_InTrigStop = false;
-    TIMER0_HardTriggerInit(M4_TMR01, Tim0_ChannelB, &StcTimer0TrigInit)*/;
+    TIMER0_HardTriggerInit(M4_TMR01, Tim0_ChannelB, &StcTimer0TrigInit);
     /*----------------------------------------------------------------------------------------------*/
 
     /**Timer02 A set as uart3 timeout clock source--------------------------------------------------*/

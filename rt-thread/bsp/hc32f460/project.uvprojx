@@ -192,7 +192,7 @@
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>0</nSecure>
-            <RoSelD>4</RoSelD>
+            <RoSelD>3</RoSelD>
             <RwSelD>4</RwSelD>
             <CodeSel>0</CodeSel>
             <OptFeed>0</OptFeed>
@@ -274,8 +274,8 @@
               </OCR_RVCT3>
               <OCR_RVCT4>
                 <Type>1</Type>
-                <StartAddress>0x0</StartAddress>
-                <Size>0x80000</Size>
+                <StartAddress>0x8000</StartAddress>
+                <Size>0x1a000</Size>
               </OCR_RVCT4>
               <OCR_RVCT5>
                 <Type>1</Type>
@@ -360,7 +360,7 @@
             </VariousControls>
           </Aads>
           <LDads>
-            <umfTarg>0</umfTarg>
+            <umfTarg>1</umfTarg>
             <Ropi>0</Ropi>
             <Rwpi>0</Rwpi>
             <noStLib>0</noStLib>
@@ -466,6 +466,16 @@
               <FileName>app_IOT2Board.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\applications\app_IOT2Board.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\applications\app_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>app_OTA.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\applications\app_OTA.c</FilePath>
             </File>
           </Files>
         </Group>

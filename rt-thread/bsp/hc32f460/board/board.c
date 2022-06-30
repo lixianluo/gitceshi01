@@ -95,6 +95,7 @@ void rt_hw_board_init(void)
     TIMER0_vInit();
 	Timera_vInit();
 	Adc_vConfig();
+    UART2_vInit();
     UART3_vInit();
     WDT_vConfig();
     /* Call components board initial (use INIT_BOARD_EXPORT()) */
