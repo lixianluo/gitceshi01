@@ -46,6 +46,10 @@ static const uint8_t time[] = { "OpHrs:" };
 static const uint8_t close[] = { "Please wait ... " };
 /*------------------------------------------------------------------------------------*/
 
+/*OTA升级----------------------------------------------------------------------------*/
+static const uint8_t OTA[] = { "App updating ..." };
+/*------------------------------------------------------------------------------------*/
+
 
 /*错误代码显示------------------------------------------------------------------------*/
 static const uint8_t error1[][17] =
@@ -79,6 +83,7 @@ static void Display_Empty(void);
 static void Display_Error(void);
 static void DisplayErrorHandler(void);
 static void Display_Close(void);
+static void Display_OTA(void);
 static void Display_WIFI_ON(void); 
 static void Display_WIFI_OFF(void);
 static void	Display_WIFI_Filp(void);
@@ -162,7 +167,12 @@ static void Display_vTaskHandler_entry(void* parameter)
                 IIC_LCD1602_WIFI_Init();                    //1602wifi符号初始化
                 DisplayTaskState.tTaskState = DISPLAY_TASK_RUN;
                 break;
-            }              
+            }
+            case DISPLAY_TASK_OTA:
+            {
+                Display_OTA();
+                break;
+            }
             default:break;
         }
       if((systick_s % 3)==0)
@@ -199,83 +209,165 @@ static void Display_Start_up(void)
 }
 static void Display_Run(void)
 {
+    if ((Key_ptGetInfo()->Suction_Key_Flag == 1) || (Key_ptGetInfo()->Hand_Key_FLag))
+    {
+        if (ADC_ptGetInfo()->supply_voltage >= 24.6f)
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[10]), (uint8_t*)battery[10]);
+            DisplayTaskState.batter_info = 10;
+        }
+        if ((ADC_ptGetInfo()->supply_voltage >= 24.4f) && (ADC_ptGetInfo()->supply_voltage < 24.6f))
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[9]), (uint8_t*)battery[9]);
+            DisplayTaskState.batter_info = 9;
+        }
+        if ((ADC_ptGetInfo()->supply_voltage >= 24.2f) && (ADC_ptGetInfo()->supply_voltage < 24.4f))
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[8]), (uint8_t*)battery[8]);
+            DisplayTaskState.batter_info = 8;
+        }
+        if ((ADC_ptGetInfo()->supply_voltage >= 23.8f) && (ADC_ptGetInfo()->supply_voltage < 24.2f))
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[7]), (uint8_t*)battery[7]);
+            DisplayTaskState.batter_info = 7;
+        }
+        if ((ADC_ptGetInfo()->supply_voltage >= 23.4f) && (ADC_ptGetInfo()->supply_voltage < 23.8f))
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[6]), (uint8_t*)battery[6]);
+            DisplayTaskState.batter_info = 6;
+        }
+        if ((ADC_ptGetInfo()->supply_voltage >= 23.1f) && (ADC_ptGetInfo()->supply_voltage < 23.4f))
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[5]), (uint8_t*)battery[5]);
+            DisplayTaskState.batter_info = 5;
+        }
+        if ((ADC_ptGetInfo()->supply_voltage >= 22.9f) && (ADC_ptGetInfo()->supply_voltage < 23.1f))
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[4]), (uint8_t*)battery[4]);
+            DisplayTaskState.batter_info = 4;
+        }
+        if ((ADC_ptGetInfo()->supply_voltage >= 22.6f) && (ADC_ptGetInfo()->supply_voltage < 22.9f))
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[3]), (uint8_t*)battery[3]);
+            DisplayTaskState.batter_info = 3;
+        }
+        if ((ADC_ptGetInfo()->supply_voltage >= 22.4f) && (ADC_ptGetInfo()->supply_voltage < 22.6f))
+        {
+            if (systick_100ms < 5)
+            {
+                IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[2]), (uint8_t*)battery[2]);
+            }
+            else
+            {
+                IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(clear_1), (uint8_t*)clear_1);
+            }
+            DisplayTaskState.batter_info = 2;
+        }
+        if ((ADC_ptGetInfo()->supply_voltage >= 22.2f) && (ADC_ptGetInfo()->supply_voltage < 22.4f))
+        {
+            if (systick_100ms < 5)
+            {
+                IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[1]), (uint8_t*)battery[1]);
+            }
+            else
+            {
+                IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(clear_1), (uint8_t*)clear_1);
+            }
+            DisplayTaskState.batter_info = 1;
+        }
+        if (ADC_ptGetInfo()->supply_voltage < 22.2f)
+        {
+            if (systick_100ms < 5)
+            {
+                IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[0]), (uint8_t*)battery[0]);
+            }
+            else
+            {
+                IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(clear_1), (uint8_t*)clear_1);
+            }
+            DisplayTaskState.batter_info = 0;
+        }
+    }
+    else
+    {
+        if (ADC_ptGetInfo()->supply_voltage >= 25.0f)
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[10]), (uint8_t*)battery[10]);
+            DisplayTaskState.batter_info = 10;
+        }
+        if ((ADC_ptGetInfo()->supply_voltage >= 24.8f) && (ADC_ptGetInfo()->supply_voltage < 25.0f))
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[9]), (uint8_t*)battery[9]);
+            DisplayTaskState.batter_info = 9;
+        }
+        if ((ADC_ptGetInfo()->supply_voltage >= 24.6f) && (ADC_ptGetInfo()->supply_voltage < 24.8f))
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[8]), (uint8_t*)battery[8]);
+            DisplayTaskState.batter_info = 8;
+        }
+        if ((ADC_ptGetInfo()->supply_voltage >= 24.4f) && (ADC_ptGetInfo()->supply_voltage < 24.6f))
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[7]), (uint8_t*)battery[7]);
+            DisplayTaskState.batter_info = 7;
+        }
+        if ((ADC_ptGetInfo()->supply_voltage >= 24.2f) && (ADC_ptGetInfo()->supply_voltage < 24.4f))
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[6]), (uint8_t*)battery[6]);
+            DisplayTaskState.batter_info = 6;
+        }
+        if ((ADC_ptGetInfo()->supply_voltage >= 24.0f) && (ADC_ptGetInfo()->supply_voltage < 24.2f))
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[5]), (uint8_t*)battery[5]);
+            DisplayTaskState.batter_info = 5;
+        }
+        if ((ADC_ptGetInfo()->supply_voltage >= 23.8f) && (ADC_ptGetInfo()->supply_voltage < 24.0f))
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[4]), (uint8_t*)battery[4]);
+            DisplayTaskState.batter_info = 4;
+        }
+        if ((ADC_ptGetInfo()->supply_voltage >= 23.6f) && (ADC_ptGetInfo()->supply_voltage < 23.8f))
+        {
+            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[3]), (uint8_t*)battery[3]);
+            DisplayTaskState.batter_info = 3;
+        }
+        if ((ADC_ptGetInfo()->supply_voltage >= 23.4f) && (ADC_ptGetInfo()->supply_voltage < 23.6f))
+        {
+            if (systick_100ms < 5)
+            {
+                IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[2]), (uint8_t*)battery[2]);
+            }
+            else
+            {
+                IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(clear_1), (uint8_t*)clear_1);
+            }
+            DisplayTaskState.batter_info = 2;
+        }
+        if ((ADC_ptGetInfo()->supply_voltage >= 23.2f) && (ADC_ptGetInfo()->supply_voltage < 23.4f))
+        {
+            if (systick_100ms < 5)
+            {
+                IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[1]), (uint8_t*)battery[1]);
+            }
+            else
+            {
+                IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(clear_1), (uint8_t*)clear_1);
+            }
+            DisplayTaskState.batter_info = 1;
+        }
+        if (ADC_ptGetInfo()->supply_voltage < 23.3f)
+        {
+            if (systick_100ms < 5)
+            {
+                IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[0]), (uint8_t*)battery[0]);
+            }
+            else
+            {
+                IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(clear_1), (uint8_t*)clear_1);
+            }
+            DisplayTaskState.batter_info = 0;
+        }
+    }
     
-    if (ADC_ptGetInfo()->supply_voltage >= 24.5f)
-    {
-        IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[10]), (uint8_t*)battery[10]);
-        DisplayTaskState.batter_info = 10;
-    }
-    if ((ADC_ptGetInfo()->supply_voltage >= 24.3f) && (ADC_ptGetInfo()->supply_voltage < 24.5f))
-    {
-        IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[9]), (uint8_t*)battery[9]);
-        DisplayTaskState.batter_info = 9;
-    }
-    if ((ADC_ptGetInfo()->supply_voltage >= 24.1f) && (ADC_ptGetInfo()->supply_voltage < 24.3f))
-    {
-        IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[8]), (uint8_t*)battery[8]);
-        DisplayTaskState.batter_info = 8;
-    }
-    if ((ADC_ptGetInfo()->supply_voltage >= 23.7f) && (ADC_ptGetInfo()->supply_voltage < 24.1f))
-    {
-        IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[7]), (uint8_t*)battery[7]);
-        DisplayTaskState.batter_info = 7;
-    }
-    if ((ADC_ptGetInfo()->supply_voltage >= 23.3f) && (ADC_ptGetInfo()->supply_voltage < 23.7f))
-    {
-        IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[6]), (uint8_t*)battery[6]);
-        DisplayTaskState.batter_info = 6;
-    }
-    if ((ADC_ptGetInfo()->supply_voltage >= 23.0f) && (ADC_ptGetInfo()->supply_voltage < 23.3f))
-    {
-        IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[5]), (uint8_t*)battery[5]);
-        DisplayTaskState.batter_info = 5;
-    }
-    if ((ADC_ptGetInfo()->supply_voltage >= 22.8f) && (ADC_ptGetInfo()->supply_voltage < 23.0f))
-    {
-        IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[4]), (uint8_t*)battery[4]);
-        DisplayTaskState.batter_info = 4;
-    }
-    if ((ADC_ptGetInfo()->supply_voltage >= 22.6f) && (ADC_ptGetInfo()->supply_voltage < 22.8f))
-    {
-        IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[3]), (uint8_t*)battery[3]);
-        DisplayTaskState.batter_info = 3;
-    }
-    if ((ADC_ptGetInfo()->supply_voltage >= 22.4f) && (ADC_ptGetInfo()->supply_voltage < 22.6f))
-    {
-        if (systick_100ms < 5)
-        {
-            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[2]), (uint8_t*)battery[2]);
-        }
-        else
-        {
-            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(clear_1), (uint8_t*)clear_1);
-        }
-        DisplayTaskState.batter_info = 2;
-    }
-    if ((ADC_ptGetInfo()->supply_voltage >= 22.2f) && (ADC_ptGetInfo()->supply_voltage < 22.4f))
-    {
-        if (systick_100ms < 5)
-        {
-            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[1]), (uint8_t*)battery[1]);
-        }
-        else
-        {
-            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(clear_1), (uint8_t*)clear_1);
-        }
-        DisplayTaskState.batter_info = 1;
-    }
-    if (ADC_ptGetInfo()->supply_voltage < 22.2f)
-    {
-        if (systick_100ms < 5)
-        {
-            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[0]), (uint8_t*)battery[0]);
-        }
-        else
-        {
-            IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(clear_1), (uint8_t*)clear_1);
-        }
-        DisplayTaskState.batter_info = 0;
-    }
     Display_UseTime();
 
     if (DisplayTaskState.wifi_switch == 1)
@@ -348,6 +440,11 @@ static void Display_Close(void)
     IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE2_START, sizeof(clear), (uint8_t*)clear);  //下行写入空
     rt_thread_mdelay(1500);
     Display_Empty();
+}
+static void Display_OTA(void)
+{
+    IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(OTA) - 1, (uint8_t*)OTA);
+    IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE2_START, sizeof(clear), (uint8_t*)clear);  //下行写入空
 }
 static void DisplayErrorHandler(void)
 {

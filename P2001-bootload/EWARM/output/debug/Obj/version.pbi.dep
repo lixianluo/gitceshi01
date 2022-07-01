@@ -1,6 +1,7 @@
-version.pbi: E:\p2001_project\hdsc-bootload-P2001\source\version.c \
-  E:\p2001_project\hdsc-bootload-P2001\source/version.h \
-  E:\p2001_project\hdsc-bootload-P2001\source/defines.h \
+version.pbi: \
+  E:\p2001_project\p2001-software\P2001-bootload\source\version.c \
+  E:\p2001_project\p2001-software\P2001-bootload\source/version.h \
+  E:\p2001_project\p2001-software\P2001-bootload\source/defines.h \
   D:\IAR_8.40.2\arm\inc\c\stdint.h D:\IAR_8.40.2\arm\inc\c\ycheck.h \
   D:\IAR_8.40.2\arm\inc\c\yvals.h \
   D:\IAR_8.40.2\arm\inc\c\DLib_Defaults.h \

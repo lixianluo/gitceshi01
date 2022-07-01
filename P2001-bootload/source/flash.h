@@ -41,10 +41,10 @@
 #define FLASH_BOOT_SIZE							0x8000		//!< 32 Kbytes			 
 
 #define FLASH_APP_START_ADDR					(FLASH_BOOT_START_ADDR + FLASH_BOOT_SIZE)        
-#define FLASH_APP_SIZE							0x1C000		//!< 112 Kbytes														
+#define FLASH_APP_SIZE							0x1A000		//!< 104 Kbytes														
 
 #define FLASH_DOWNLOAD_START_ADDR				(FLASH_APP_START_ADDR + FLASH_APP_SIZE)        
-#define FLASH_DOWNLOAD_SIZE						0x1C000		//!< 112 Kbtes
+#define FLASH_DOWNLOAD_SIZE						0x1A000		//!< 104 Kbtes
 
 #define FLASH_DOWNLOAD_MAGIC_WORD_BEGIN_OFFSET	0
 #define FLASH_DOWNLOAD_FILE_SIZE_OFFSET			4

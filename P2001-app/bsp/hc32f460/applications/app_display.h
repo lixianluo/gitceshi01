@@ -13,6 +13,7 @@ typedef enum {
 	DISPLAY_TASK_ERROR,			//错误显示
 	DISPLAY_TASK_CLOSE,			//关机显示
 	DISPLAY_TASK_REBOOT,		//重启1602
+	DISPLAY_TASK_OTA,			//OTA升级显示
 }TDisplayTaskState;
 
 typedef struct {

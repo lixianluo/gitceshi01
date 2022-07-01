@@ -669,7 +669,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state>hc32f460keta_boot.bin</state>
+                    <state>P2001_bootload.bin</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>

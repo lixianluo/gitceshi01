@@ -1,6 +1,9 @@
 #include "app_OTA.h"
 #include "usart.h"
 #include "app_IOT2Board.h"
+#include "app_task.h"
+#include "flash.h"
+#include "app_display.h"
 
 /*私有变量-----------------------------------------------------------------------*/
 static volatile uint32_t OTA_ulMsgToTransmitBits = 0;		//最大32个消息能被发送
@@ -23,7 +26,7 @@ static  rt_sem_t usart2_tx_sem = RT_NULL;			//发送信号量
 /*私有函数-----------------------------------------------------------------------*/
 static void OTA_vTxInfo(TOTAMsgObjDef* tObject);		//OTA发送回调函数
 static void OTA_vRxInfo(TOTAMsgObjDef* tObject);		//OTA接收回调函数
-static void hw_cpu_reset(void);							//MCU重启 往CPU寄存器写入0x05FA0004 具体看M4内核手册
+
 
 
 static uint8_t OTA_ucGetTransmitMessageIndex(void);								 //得到发送列表序号
@@ -101,7 +104,10 @@ static void OTA_vRxInfo(TOTAMsgObjDef* tObject)
 		{
 			if (tObject->ucPayload[1] == 0x02)
 			{
-				hw_cpu_reset();
+				Flash_ptGetInfo()->tTaskState = FLASH_TASK_SAVE;
+				Display_ptGetInfo()->tTaskState = DISPLAY_TASK_OTA;
+				App_Task(SYS_TASK_OTA);
+				
 			}
 			else
 			{
@@ -252,13 +258,7 @@ void OTA_vTransmitMessage(uint8_t ucMessageIndex)
 		rt_sem_release(usart2_tx_sem);
 	}
 }
-static void hw_cpu_reset(void)
-{
-#define SCB_AIRCR       (*(volatile unsigned long *)0xE000ED0C)  /* Reset control Address Register */
-#define SCB_RESET_VALUE 0x05FA0004                               /* Reset value, write to SCB_AIRCR can reset cpu */
 
-	SCB_AIRCR = SCB_RESET_VALUE;
-}
 
 
 

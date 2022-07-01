@@ -351,7 +351,6 @@ static int32_t _rym_trans_fin(void)
          /* congratulations, check passed. */
          /* put the last ACK */
          _rym_putchar(RYM_CODE_ACK);
-
          return 0;
     }
 

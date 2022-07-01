@@ -18,7 +18,7 @@ static SysTaskDef SysTaskState;
 
 
 /*私有函数-------------------------------------------------------*/
-
+static void hw_cpu_reset(void);							//MCU重启 往CPU寄存器写入0x05FA0004 具体看M4内核手册
 static void Task_vTaskHandler_Entry(void* parameter);
 
 /*---------------------------------------------------------------*/
@@ -148,19 +148,39 @@ static void Task_vTaskHandler_Entry(void* parameter)
 			}
 			break;
 		}
+		case SYS_TASK_OTA:
+		{
+			if ((Flash_ptGetInfo()->tTaskState == FLASH_TASK_SAVE_DONE)&&\
+				(Display_ptGetInfo()->tTaskState == DISPLAY_TASK_OTA))
+			{
+				hw_cpu_reset();
+			}
+			break;
+		}
+
+
 		default:break;
 
 		}
 		rt_thread_mdelay(10);
 	}
 }
+static void hw_cpu_reset(void)
+{
+#define SCB_AIRCR       (*(volatile unsigned long *)0xE000ED0C)  /* Reset control Address Register */
+#define SCB_RESET_VALUE 0x05FA0004                               /* Reset value, write to SCB_AIRCR can reset cpu */
+
+	SCB_AIRCR = SCB_RESET_VALUE;
+}
 
 
 
 
 
-
-
+void App_Task(SysTaskDef status)
+{
+	SysTaskState = status;
+}
 
 
 

@@ -18,13 +18,13 @@
     <StLinkDriver>
         <stlinkserialNo>334E4E00</stlinkserialNo>
         <stlinkfoundProbes />
-        <CStepIntDis>_ 0</CStepIntDis>
-        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
         <stlinkResetStyle>0</stlinkResetStyle>
         <stlinkResetStrategy>2</stlinkResetStrategy>
+        <CStepIntDis>_ 0</CStepIntDis>
+        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
     </StLinkDriver>
     <DebugChecksum>
-        <Checksum>734950749</Checksum>
+        <Checksum>1414699841</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -148,29 +148,10 @@
         <ShowTimeSum>1</ShowTimeSum>
         <SumSortOrder>0</SumSortOrder>
     </EventLog>
-    <DisassembleMode>
-        <mode>0</mode>
-    </DisassembleMode>
-    <Breakpoints2>
-        <Bp0>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\source\AlgorithmBoard\AlgorithmBoard.c}.0.1" 0 0 1 "" 0 "" 0</Bp0>
-        <Bp1>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\source\tnd_fota.c}.268.5" 0 0 1 "" 0 "" 0</Bp1>
-        <Count>2</Count>
-    </Breakpoints2>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
     </TermIOLog>
-    <LogFile>
-        <LoggingEnabled>_ 0</LoggingEnabled>
-        <LogFile>_ ""</LogFile>
-        <Category>_ 0</Category>
-    </LogFile>
-    <Aliases>
-        <A0>_ "G:\workspace\Taung\TN50\Bootloader\hdsc_bootloader\driver\src\hc32f46x_utility.c" ""</A0>
-        <A1>_ "G:\workspace\Taung\TN50\Bootloader\hdsc_bootloader\source\main.c" ""</A1>
-        <Count>2</Count>
-        <SuppressDialog>0</SuppressDialog>
-    </Aliases>
     <DriverProfiling>
         <Enabled>0</Enabled>
         <Mode>3</Mode>
@@ -184,4 +165,34 @@
     <CallStackStripe>
         <ShowTiming>1</ShowTiming>
     </CallStackStripe>
+    <LogFile>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ ""</LogFile>
+        <Category>_ 0</Category>
+    </LogFile>
+    <DisassembleMode>
+        <mode>0</mode>
+    </DisassembleMode>
+    <Breakpoints2>
+        <Bp0>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\source\AlgorithmBoard\AlgorithmBoard.c}.0.1" 0 0 1 "" 0 "" 0</Bp0>
+        <Bp1>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\source\tnd_fota.c}.209.2" 0 0 1 "" 0 "" 0</Bp1>
+        <Bp2>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\source\ymodem_ota.c}.512.17" 0 0 1 "" 0 "" 0</Bp2>
+        <Bp3>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\source\tnd_fota.c}.169.2" 0 0 1 "" 0 "" 0</Bp3>
+        <Bp4>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\source\tnd_fota.c}.171.3" 0 0 1 "" 0 "" 0</Bp4>
+        <Count>5</Count>
+    </Breakpoints2>
+    <Aliases>
+        <A0>_ "E:\p2001_project\hdsc-bootload-P2001\EWARM\startup_hc32f460keta.s" ""</A0>
+        <A1>_ "E:\p2001_project\hdsc-bootload-P2001\driver\src\hc32f46x_clk.c" ""</A1>
+        <A2>_ "E:\p2001_project\hdsc-bootload-P2001\driver\src\hc32f46x_crc.c" ""</A2>
+        <A3>_ "E:\p2001_project\hdsc-bootload-P2001\driver\src\hc32f46x_dmac.c" ""</A3>
+        <A4>_ "E:\p2001_project\hdsc-bootload-P2001\driver\src\hc32f46x_efm.c" ""</A4>
+        <A5>_ "E:\p2001_project\hdsc-bootload-P2001\driver\src\hc32f46x_interrupts.c" ""</A5>
+        <A6>_ "E:\p2001_project\hdsc-bootload-P2001\driver\src\hc32f46x_utility.c" ""</A6>
+        <A7>_ "E:\p2001_project\hdsc-bootload-P2001\source\AlgorithmBoard\AlgorithmBoard.c" ""</A7>
+        <A8>_ "G:\workspace\Taung\TN50\Bootloader\hdsc_bootloader\driver\src\hc32f46x_utility.c" ""</A8>
+        <A9>_ "G:\workspace\Taung\TN50\Bootloader\hdsc_bootloader\source\main.c" ""</A9>
+        <Count>10</Count>
+        <SuppressDialog>0</SuppressDialog>
+    </Aliases>
 </settings>

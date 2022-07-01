@@ -1,7 +1,7 @@
 hc32f46x_interrupts.pbi: \
-  E:\p2001_project\hdsc-bootload-P2001\driver\src\hc32f46x_interrupts.c \
-  E:\p2001_project\hdsc-bootload-P2001\EWARM\..\driver\inc\hc32f46x_interrupts.h \
-  E:\p2001_project\hdsc-bootload-P2001\EWARM\..\common\hc32_common.h \
+  E:\p2001_project\p2001-software\P2001-bootload\driver\src\hc32f46x_interrupts.c \
+  E:\p2001_project\p2001-software\P2001-bootload\EWARM\..\driver\inc\hc32f46x_interrupts.h \
+  E:\p2001_project\p2001-software\P2001-bootload\EWARM\..\common\hc32_common.h \
   D:\IAR_8.40.2\arm\inc\c\stdio.h D:\IAR_8.40.2\arm\inc\c\ycheck.h \
   D:\IAR_8.40.2\arm\inc\c\yvals.h \
   D:\IAR_8.40.2\arm\inc\c\DLib_Defaults.h \
@@ -11,13 +11,13 @@ hc32f46x_interrupts.pbi: \
   D:\IAR_8.40.2\arm\inc\c\DLib_Product_string.h \
   D:\IAR_8.40.2\arm\inc\c\stddef.h D:\IAR_8.40.2\arm\inc\c\stdint.h \
   D:\IAR_8.40.2\arm\inc\c\stdbool.h \
-  E:\p2001_project\hdsc-bootload-P2001\EWARM\..\common/hc32f460keta.h \
+  E:\p2001_project\p2001-software\P2001-bootload\EWARM\..\common/hc32f460keta.h \
   D:\IAR_8.40.2\arm\CMSIS\Core\Include\core_cm4.h \
   D:\IAR_8.40.2\arm\CMSIS\Core\Include/cmsis_version.h \
   D:\IAR_8.40.2\arm\CMSIS\Core\Include/cmsis_compiler.h \
   D:\IAR_8.40.2\arm\CMSIS\Core\Include\cmsis_iccarm.h \
   D:\IAR_8.40.2\arm\inc\c\iccarm_builtin.h \
   D:\IAR_8.40.2\arm\CMSIS\Core\Include/mpu_armv7.h \
-  E:\p2001_project\hdsc-bootload-P2001\EWARM\..\common/system_hc32f460keta.h \
-  E:\p2001_project\hdsc-bootload-P2001\EWARM\..\source\ddl_config.h \
-  E:\p2001_project\hdsc-bootload-P2001\EWARM\..\driver\inc\hc32f46x_utility.h
+  E:\p2001_project\p2001-software\P2001-bootload\EWARM\..\common/system_hc32f460keta.h \
+  E:\p2001_project\p2001-software\P2001-bootload\EWARM\..\source\ddl_config.h \
+  E:\p2001_project\p2001-software\P2001-bootload\EWARM\..\driver\inc\hc32f46x_utility.h

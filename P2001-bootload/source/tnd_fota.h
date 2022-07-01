@@ -3,7 +3,7 @@
 
 #include "defines.h"
 
-#define FOTA_DEVICE_NAME	"TND_SNR"
+#define FOTA_DEVICE_NAME	"P2001_DRV"
 
 #define TND_CTL_DEVICE_NAME	"TND_CTL"
 #define TND_DRV_DEVICE_NAME	"TND_DRV"

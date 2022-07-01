@@ -1,6 +1,6 @@
 system_hc32f460keta.pbi: \
-  E:\p2001_project\hdsc-bootload-P2001\common\system_hc32f460keta.c \
-  E:\p2001_project\hdsc-bootload-P2001\common/hc32_common.h \
+  E:\p2001_project\p2001-software\P2001-bootload\common\system_hc32f460keta.c \
+  E:\p2001_project\p2001-software\P2001-bootload\common/hc32_common.h \
   D:\IAR_8.40.2\arm\inc\c\stdio.h D:\IAR_8.40.2\arm\inc\c\ycheck.h \
   D:\IAR_8.40.2\arm\inc\c\yvals.h \
   D:\IAR_8.40.2\arm\inc\c\DLib_Defaults.h \
@@ -10,11 +10,11 @@ system_hc32f460keta.pbi: \
   D:\IAR_8.40.2\arm\inc\c\DLib_Product_string.h \
   D:\IAR_8.40.2\arm\inc\c\stddef.h D:\IAR_8.40.2\arm\inc\c\stdint.h \
   D:\IAR_8.40.2\arm\inc\c\stdbool.h \
-  E:\p2001_project\hdsc-bootload-P2001\common/hc32f460keta.h \
+  E:\p2001_project\p2001-software\P2001-bootload\common/hc32f460keta.h \
   D:\IAR_8.40.2\arm\CMSIS\Core\Include\core_cm4.h \
   D:\IAR_8.40.2\arm\CMSIS\Core\Include/cmsis_version.h \
   D:\IAR_8.40.2\arm\CMSIS\Core\Include/cmsis_compiler.h \
   D:\IAR_8.40.2\arm\CMSIS\Core\Include\cmsis_iccarm.h \
   D:\IAR_8.40.2\arm\inc\c\iccarm_builtin.h \
   D:\IAR_8.40.2\arm\CMSIS\Core\Include/mpu_armv7.h \
-  E:\p2001_project\hdsc-bootload-P2001\common/system_hc32f460keta.h
+  E:\p2001_project\p2001-software\P2001-bootload\common/system_hc32f460keta.h

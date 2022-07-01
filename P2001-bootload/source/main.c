@@ -74,6 +74,7 @@
 #include "flash.h"
 #include "can_iap.h"
 #include "UART/uart.h"
+#include "ymodem_ota.h"
 /*******************************************************************************
  * Local type definitions ('typedef')
  ******************************************************************************/
@@ -177,7 +178,7 @@ int32_t main(void)
         if (TMR_bIsTimeExpired(TMR_SW_WATCH_DOG))
         {
             /**OTA state*/
-            if (can_is_data_received())
+            if (ymodem_is_ota_data_received())
             {
                 TMR_vSetTime(TMR_SW_WATCH_DOG, TMR_TIME_MS2TICKS(50));
             }
