@@ -14,17 +14,22 @@
 #define LED1_PIN         (Pin15)
 
 
-//#define RS485_1_DE_PORT   (PortA)
-//#define RS485_1_DE_PIN    (Pin10)
-//
-//#define RS485_2_DE_PORT   (PortC)
-//#define RS485_2_DE_PIN    (Pin09)
-//
-//#define CAMERA_SYNC_PORT  (PortD)
-//#define CAMERA_SYNC_PIN	  (Pin02)
+/* 输入----------------------------------------------------------------------------*/
+#define SWITCH_B3_PORT						(PortC)		//旋转开关B3引脚
+#define SWITCH_B3_PIN						(Pin09)		//旋转开关B3引脚
+
+#define SWITCH_A2_PORT						(PortC)		//旋转开关A2引脚
+#define SWITCH_A2_PIN						(Pin08)		//旋转开关A2引脚
+
+#define SWITCH_A1_PORT						(PortC)		//旋转开关A1引脚
+#define SWITCH_A1_PIN						(Pin07)		//旋转开关A1引脚
+
+#define HAND_PORT_1							(PortA)		//把手开关1
+#define HAND_PIN_1							(Pin01)		//把手开关1
 
 
-
+#define HAND_PORT_2							(PortA)		//把手开关2
+#define HAND_PIN_2							(Pin03)		//把手开关2
 
 
 extern void GPIO_vInit(void);

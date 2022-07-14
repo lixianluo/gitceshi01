@@ -498,7 +498,7 @@ static void supply_voltage_timeout(void* parameter)
         supply_voltage_count++;
         if (supply_voltage_count == 60)    //1s进入一次，当到60次时，就是1分钟
         {
-            ADC_tInfo.supply_voltage = supply_voltage_buff / supply_voltage_count;
+            ADC_tInfo.supply_voltage = ADC_tInfo.supply_voltage < (supply_voltage_buff / supply_voltage_count) ? ADC_tInfo.supply_voltage : (supply_voltage_buff / supply_voltage_count);
             supply_voltage_buff = 0;
             supply_voltage_count = 0;
         }

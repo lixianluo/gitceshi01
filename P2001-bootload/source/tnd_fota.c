@@ -254,8 +254,8 @@ void FOTA_vTaskHandler(void)
 			FOTA_tTaskState = FOTA_TASK_CHECK_UPDATE; 
 			//can_start_iap(CAN_IAP_CLENT_MODE);			//该项目没有用到CAN
 			ymodem_start_ota();								//将ymodem_ota_sem = 1;
-			//TMR_vSetTime(TMR_FOTA_POLLING, TMR_TIME_MS2TICKS(200));		//!< 200ms to check can iap request   
-			TMR_vSetTime(TMR_FOTA_POLLING, TMR_TIME_SEC2TICKS(10));		//!< 10s to check can iap request   
+			TMR_vSetTime(TMR_FOTA_POLLING, TMR_TIME_MS2TICKS(200));		//!< 200ms to check can iap request   
+			//TMR_vSetTime(TMR_FOTA_POLLING, TMR_TIME_SEC2TICKS(10));		//!< 10s to check can iap request   
 			break;
 		}
 		

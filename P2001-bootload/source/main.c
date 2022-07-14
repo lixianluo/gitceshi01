@@ -154,7 +154,8 @@ int32_t main(void)
 
     /**SysTick configuration */
     SysTick_Init(1000u);
-
+    PORT_DebugPortSetting(TDO_SWO, Disable);
+    PORT_DebugPortSetting(TRST, Disable);
     TIMER4_vInit(); //!< as software timer
     GPIO_vInit();
 

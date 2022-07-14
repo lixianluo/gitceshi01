@@ -92,7 +92,9 @@ static void Task_vTaskHandler_Entry(void* parameter)
 				IOT_vTransmitMessage(IOT_MSG_INFO_REPORT);			//关机发送一条指令给IOT
 				SysTaskState = SYS_TASK_CLOSE;
 			}
-			else if (Display_ptGetInfo()->tTaskState == DISPLAY_TASK_START_UP_DONE)
+			else if ((Display_ptGetInfo()->tTaskState == DISPLAY_TASK_START_UP_DONE)||\
+							(Display_ptGetInfo()->tTaskState == DISPLAY_TASK_ERROR)||\
+							(Display_ptGetInfo()->tTaskState ==DISPLAY_TASK_RUN))
 			{
 				SysTaskState = STS_TASK_RUN;
 			}

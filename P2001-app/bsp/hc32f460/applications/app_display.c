@@ -209,8 +209,8 @@ static void Display_Start_up(void)
 }
 static void Display_Run(void)
 {
-    if ((Key_ptGetInfo()->Suction_Key_Flag == 1) || (Key_ptGetInfo()->Hand_Key_FLag))
-    {
+   /* if ((Key_ptGetInfo()->Suction_Key_Flag == 1) || (Key_ptGetInfo()->Hand_Key_FLag))
+    {*/
         if (ADC_ptGetInfo()->supply_voltage >= 24.6f)
         {
             IIC_LCD1602_Write_String(LCD_DDRAM_ADDR_LINE1_START, sizeof(battery[10]), (uint8_t*)battery[10]);
@@ -287,7 +287,7 @@ static void Display_Run(void)
             }
             DisplayTaskState.batter_info = 0;
         }
-    }
+   /* }
     else
     {
         if (ADC_ptGetInfo()->supply_voltage >= 25.0f)
@@ -366,7 +366,7 @@ static void Display_Run(void)
             }
             DisplayTaskState.batter_info = 0;
         }
-    }
+    }*/
     
     Display_UseTime();
 

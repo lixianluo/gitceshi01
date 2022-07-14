@@ -36,9 +36,11 @@
 #define SWITCH_A1_PORT						(PortC)		//旋转开关A1引脚
 #define SWITCH_A1_PIN						(Pin07)		//旋转开关A1引脚
 
-#define HAND_PORT							(PortA)		//把手开关
-#define HAND_PIN							(Pin02)		//把手开关
+#define HAND_PORT_1							(PortA)		//把手开关1
+#define HAND_PIN_1							(Pin01)		//把手开关1
 
+#define HAND_PORT_2							(PortA)		//把手开关1
+#define HAND_PIN_2							(Pin03)		//把手开关1
 
 /*模拟通讯-------------------------------------------------------------------------*/
 #define IIC_SDA_PORT						(PortC)		//模拟IIC_SDA

@@ -100,7 +100,7 @@ static void Key_Scan(void)
         Key_tCount.A1_Flag = 0;
     }
 
-    if (PORT_GetBit(HAND_PORT, HAND_PIN) == Reset)                      //把手开关被接通
+    if ((PORT_GetBit(HAND_PORT_1, HAND_PIN_1) == Reset)||(PORT_GetBit(HAND_PORT_2, HAND_PIN_2) == Reset))                     //把手开关被接通
     {
         Key_tCount.Hand_Count++;
         if (Key_tCount.Hand_Count >= 30)
@@ -109,7 +109,7 @@ static void Key_Scan(void)
 
         }
     }
-    else if (PORT_GetBit(HAND_PORT, HAND_PIN) == Set)
+    else if ((PORT_GetBit(HAND_PORT_1, HAND_PIN_1) == Set)&& (PORT_GetBit(HAND_PORT_2, HAND_PIN_2) == Set))
     {
         Key_tCount.Hand_Count = 0;
         Key_tCount.Hand_Flag = 0;

@@ -46,7 +46,8 @@ void GPIO_vInit(void)
 
     PORT_Init(SWITCH_A1_PORT, SWITCH_A1_PIN, &stcPortInit);             //旋转开关A1引脚配置
 
-    PORT_Init(HAND_PORT, HAND_PIN, &stcPortInit);                       //把手开关引脚配置
+    PORT_Init(HAND_PORT_1, HAND_PIN_1, &stcPortInit);                       //把手开关引脚配置
+    PORT_Init(HAND_PORT_2, HAND_PIN_2, &stcPortInit);                       //把手开关引脚配置
 
     /*IIC初始化---------------------------------------------------*/
     MEM_ZERO_STRUCT(stcPortInit);

@@ -18,20 +18,20 @@ UART_HandleTypeDef uart2_handler;
 
 static void Usart2ErrIrqCallback(void)
 {
-    if (Set == USART_GetStatus(M4_USART4, UsartFrameErr))
+    if (Set == USART_GetStatus(USART_2, UsartFrameErr))
     {
-        USART_ClearStatus(M4_USART4, UsartFrameErr);
+        USART_ClearStatus(USART_2, UsartFrameErr);
     }
 
-    if (Set == USART_GetStatus(M4_USART4, UsartParityErr))
+    if (Set == USART_GetStatus(USART_2, UsartParityErr))
     {
-        USART_ClearStatus(M4_USART4, UsartParityErr);
+        USART_ClearStatus(USART_2, UsartParityErr);
     }
 
-    if (Set == USART_GetStatus(M4_USART4, UsartOverrunErr))
+    if (Set == USART_GetStatus(USART_2, UsartOverrunErr))
     {
-        USART_ClearStatus(M4_USART4, UsartOverrunErr);
-        (void)USART_RecData(M4_USART4);
+        USART_ClearStatus(USART_2, UsartOverrunErr);
+        (void)USART_RecData(USART_2);
     }
 }
 static void Usart2_vTxCpltCallback(void)

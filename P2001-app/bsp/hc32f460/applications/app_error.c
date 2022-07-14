@@ -96,68 +96,68 @@ static void Error_TaskHandler(void)
         vErrorCodeDel(Battery_Under);
         /*------------------------------------*/
     }
-    if ((suction_speed > 150) && (suction_current < 2.0f))      //吸风电机启动，电流<2.0A 则 吸风电机开路故障
-    {
-        vErrorCodeAdd(Suction_Open);                            //增加 吸风 电机开路故障
-        SUCTION_DISABLE();				                        //吸风电机失能
-    }
-    else
-    {
-        vErrorCodeDel(Suction_Open);                            //删除 吸风 电机开路故障
-        SUCTION_ENABLE();			                            //吸风电机使能
-    }
-    if ((branch_speed > 150) && (branch_current < 2.0f))        //盘刷电机启动，电流<2.0A 则 盘刷电机开路故障
-    {
-        vErrorCodeAdd(Branch_Open);                             //增加 盘刷 电机开路故障
-        BRUSH_DISABLE();				                        //盘刷电机失能
-    }
-    else
-    {
-        vErrorCodeDel(Branch_Open);                             //删除 盘刷 电机开路故障
-        BRUSH_ENABLE();				                            //盘刷电机使能
-    }
+//    if ((suction_speed > 150) && (suction_current < 2.0f))      //吸风电机启动，电流<2.0A 则 吸风电机开路故障
+//    {
+//        vErrorCodeAdd(Suction_Open);                            //增加 吸风 电机开路故障
+//        SUCTION_DISABLE();				                        //吸风电机失能
+//    }
+//    else
+//    {
+//        vErrorCodeDel(Suction_Open);                            //删除 吸风 电机开路故障
+//        SUCTION_ENABLE();			                            //吸风电机使能
+//    }
+//    if ((branch_speed > 150) && (branch_current < 2.0f))        //盘刷电机启动，电流<2.0A 则 盘刷电机开路故障
+//    {
+//        vErrorCodeAdd(Branch_Open);                             //增加 盘刷 电机开路故障
+//        BRUSH_DISABLE();				                        //盘刷电机失能
+//    }
+//    else
+//    {
+//        vErrorCodeDel(Branch_Open);                             //删除 盘刷 电机开路故障
+//        BRUSH_ENABLE();				                            //盘刷电机使能
+//    }
 
-    if (suction_current > 18.0f)                                //吸风电流>18A,直接报故障
-    {
-        vErrorCodeAdd(Suction_Over_Current);                    //增加 吸风 电机过流故障
-        SUCTION_DISABLE();				//吸风电机失能
-    }
-    else if ((suction_current > 13.0f) && (suction_current < 18.0f))    //13A<电流<18A 持续超过5s 报故障
-    {
-        Suction_Count++;
-        if (Suction_Count > 500)
-        {
-            vErrorCodeAdd(Suction_Over_Current);                //增加 吸风 电机过流故障
-            SUCTION_DISABLE();				//吸风电机失能
-        }
-    }
-    else if(suction_current < 13.0f)
-    {
-        vErrorCodeDel(Suction_Over_Current);                    //删除 吸风 电机过流故障
-        SUCTION_ENABLE();			//吸风电机使能
-        Suction_Count = 0;
-    }
-   
-    if (branch_current > 18.0f)                                    //盘刷电流>18A,直接报故障
-    {
-        vErrorCodeAdd(Branch_Over_Current);
-        BRUSH_DISABLE();				//盘刷电机失能
-    }
-    else if ((branch_current > 13.0f) && (branch_current < 18.0f))    //13A<电流<18A 持续超过5s 报故障
-    {
-        Suction_Count++;
-        if (Suction_Count > 500)
-        {
-            vErrorCodeAdd(Branch_Over_Current);
-            BRUSH_DISABLE();				//盘刷电机失能
-        }
-    }
-    else if (branch_current < 13.0f)
-    {
-        vErrorCodeDel(Branch_Over_Current);
-        BRUSH_ENABLE();				//盘刷电机使能
-        Suction_Count = 0;
-    }
+//    if (suction_current > 18.0f)                                //吸风电流>18A,直接报故障
+//    {
+//        vErrorCodeAdd(Suction_Over_Current);                    //增加 吸风 电机过流故障
+//        SUCTION_DISABLE();				//吸风电机失能
+//    }
+//    else if ((suction_current > 13.0f) && (suction_current < 18.0f))    //13A<电流<18A 持续超过5s 报故障
+//    {
+//        Suction_Count++;
+//        if (Suction_Count > 500)
+//        {
+//            vErrorCodeAdd(Suction_Over_Current);                //增加 吸风 电机过流故障
+//            SUCTION_DISABLE();				//吸风电机失能
+//        }
+//    }
+//    else if(suction_current < 13.0f)
+//    {
+//        vErrorCodeDel(Suction_Over_Current);                    //删除 吸风 电机过流故障
+//        SUCTION_ENABLE();			//吸风电机使能
+//        Suction_Count = 0;
+//    }
+//   
+//    if (branch_current > 18.0f)                                    //盘刷电流>18A,直接报故障
+//    {
+//        vErrorCodeAdd(Branch_Over_Current);
+//        BRUSH_DISABLE();				//盘刷电机失能
+//    }
+//    else if ((branch_current > 13.0f) && (branch_current < 18.0f))    //13A<电流<18A 持续超过5s 报故障
+//    {
+//        Suction_Count++;
+//        if (Suction_Count > 500)
+//        {
+//            vErrorCodeAdd(Branch_Over_Current);
+//            BRUSH_DISABLE();				//盘刷电机失能
+//        }
+//    }
+//    else if (branch_current < 13.0f)
+//    {
+//        vErrorCodeDel(Branch_Over_Current);
+//        BRUSH_ENABLE();				//盘刷电机使能
+//        Suction_Count = 0;
+//    }
 }
 
 
