@@ -2,11 +2,11 @@
 
 "D:\IAR_8.40.2\arm\bin\armstlink2.dll" 
 
-"E:\p2001_project\p2001-software\P2001-bootload\EWARM\output\debug\Exe\hc32f460keta.out" 
+"E:\p2001_project\源码\p2001-software\P2001-bootload\EWARM\output\debug\Exe\hc32f460keta.out" 
 
 --plugin="D:\IAR_8.40.2\arm\bin\armbat.dll" 
 
---flash_loader="E:\p2001_project\p2001-software\P2001-bootload\EWARM\config\flashloader\HC32F46x.board" 
+--flash_loader="E:\p2001_project\源码\p2001-software\P2001-bootload\EWARM\config\flashloader\HC32F46x.board" 
 
 
 

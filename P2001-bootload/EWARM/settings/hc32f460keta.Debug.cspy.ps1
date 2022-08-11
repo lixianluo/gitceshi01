@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "D:\IAR_8.40.2\common\bin\cspybat" -f "E:\p2001_project\p2001-software\P2001-bootload\EWARM\settings\hc32f460keta.Debug.general.xcl" --backend -f "E:\p2001_project\p2001-software\P2001-bootload\EWARM\settings\hc32f460keta.Debug.driver.xcl" 
+& "D:\IAR_8.40.2\common\bin\cspybat" -f "E:\p2001_project\源码\p2001-software\P2001-bootload\EWARM\settings\hc32f460keta.Debug.general.xcl" --backend -f "E:\p2001_project\源码\p2001-software\P2001-bootload\EWARM\settings\hc32f460keta.Debug.driver.xcl" 
 }
 else
 {
-& "D:\IAR_8.40.2\common\bin\cspybat" -f "E:\p2001_project\p2001-software\P2001-bootload\EWARM\settings\hc32f460keta.Debug.general.xcl" --debug_file=$debugfile --backend -f "E:\p2001_project\p2001-software\P2001-bootload\EWARM\settings\hc32f460keta.Debug.driver.xcl" 
+& "D:\IAR_8.40.2\common\bin\cspybat" -f "E:\p2001_project\源码\p2001-software\P2001-bootload\EWARM\settings\hc32f460keta.Debug.general.xcl" --debug_file=$debugfile --backend -f "E:\p2001_project\源码\p2001-software\P2001-bootload\EWARM\settings\hc32f460keta.Debug.driver.xcl" 
 }

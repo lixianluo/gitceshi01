@@ -159,7 +159,7 @@
                     <item>ymodem_ota_msg</item>
                     <item>result</item>
                     <item>file_name</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>
